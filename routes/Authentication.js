@@ -277,6 +277,7 @@ router.get("/verify-email", async (req, res) => {
 
 router.post("/resend-verification", isAuthenticated, async (req, res) => {
   const { email } = req.body;
+  const fullName = req.session.user.firstname + req.session.user.lastname ;
 
   try {
     // 1. Check if user exists and is NOT verified
@@ -363,8 +364,6 @@ router.post("/resend-verification", isAuthenticated, async (req, res) => {
     req.session.save(() => res.redirect("/user-profile"));
   }
 });
-
-
 
 
 module.exports = router;
