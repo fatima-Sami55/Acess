@@ -16,6 +16,55 @@ const {
 const {getProductRating, findProductByName} = require("../helper_functions/getRating");
 
 
+router.get("/",getUserMiddleware,getCartMiddleware,getWishMiddleware,getPurchaseMiddleware, async (req, res) => {
+    const isLoggedIn = req.session.user ? true : false;
+    const userId = req.session.userId;
+    const data = require("../seeds/product.json");
+
+    // Optional flash for logout
+    if (req.query.location === "logout") {
+      req.flash("success", "Successfully Logged Out!");
+      res.locals.success = req.flash("success");
+    }
+
+    let email = null;
+    let attempts = 0;
+ console.log(req.cartItemsCount)
+    // Only run these if the user is logged in
+    if (isLoggedIn && req.loggedInUser) {
+      email = req.loggedInUser.email;
+
+      const attemptResult = await pool
+        .request()
+        .input("email", email)
+        .input("userId", userId)
+        .query(`
+          SELECT COUNT(*) AS attempts
+          FROM EmailResendAttempts
+          WHERE userId = @userId
+          AND attemptAt > DATEADD(HOUR, -24, GETDATE())
+        `);
+
+      attempts = attemptResult.recordset[0].attempts;
+    }
+
+    //console.log(req.loggedInUser);
+
+    res.render("home", {
+      isLoggedIn,
+      loggedInUser: req.loggedInUser || null,
+      data,
+      page: "home",
+      cartItemsCount: req.cartItemsCount || 0,
+      wishItemsCount: req.wishItemsCount || 0,
+      orderCount: req.purchaseCount || 0,
+      notificationCount: getNoticeCount(),
+      isVerified: req.loggedInUser ? req.loggedInUser.is_verified : true,
+      resendAttempts: attempts,
+      email: email,
+    });
+});
+
 router.get("/home",getUserMiddleware,getCartMiddleware,getWishMiddleware,getPurchaseMiddleware, async (req, res) => {
     const isLoggedIn = req.session.user ? true : false;
     const userId = req.session.userId;
