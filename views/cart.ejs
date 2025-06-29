@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acess</title>
+    <link rel="icon" type="image/png" href="/image/Acess%20logo/logo.png?v=1.0" />
+  </head>
+<!-- stylesheets  -->
+   <link href="/css/cart.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  <body>
+<!-- Navbar -->
+    <%- include('../partials/navbar_carts', {page:page}) %>
+<% if (cartItems.length === 0) { %>
+  <!-- Empty Cart -->
+  <div class="container text-center cart-container-empty my-5">
+    <img
+      src="../image/vectors/find.jpg"
+      alt="No items"
+      class="img-fluid"
+      style="max-width: 300px;"
+    />
+    <h2 class="mt-4">No items found in the cart!</h2>
+  </div>
+<% } else { %>
+  <!--Cart with items -->
+  <div class="container cart-container my-4">
+    
+    <!--Desktop Table View -->
+    <div class="table-responsive d-none d-md-block">
+      <table id="cart" class="table table-hover align-middle">
+        <thead class="table-light">
+          <tr>
+            <th style="width: 40%">Product</th>
+            <th style="width: 15%">Price</th>
+            <th style="width: 15%">Quantity</th>
+            <th style="width: 20%" class="text-center">Subtotal</th>
+            <th style="width: 10%"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% cartItems.forEach((item, index) => { %>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <img src="<%= item.item_img %>" alt="Image" class="img-thumbnail" style="width: 64px; height: 64px; object-fit: cover;" />
+                <div>
+                  <h6 class="mb-1"><%= item.item_Name %></h6>
+                  <small class="text-muted d-block text-truncate description-text" title="<%= item.item_description %>">
+                    <%= item.item_description %>
+                  </small>
+                </div>
+              </div>
+            </td>
+            <td><span class="item-price">$<%= item.item_price %></span></td>
+            <td>
+              <div class="input-group quantity-group">
+                <button type="button" class="btn btn-outline-secondary btn-qty-minus" data-index="<%= index %>">-</button>
+                <input type="number" class="form-control text-center quantity-input" value="1" min="1" max="20" data-index="<%= index %>" readonly />
+                <button type="button" class="btn btn-outline-secondary btn-qty-plus" data-index="<%= index %>">+</button>
+              </div>
+            </td>
+            <td class="text-center item-subtotal">$0.00</td>
+            <td>
+              <form action="/delete/<%= item.id %>" method="POST" class="d-inline">
+                <button class="btn btn-sm btn-danger" title="Remove">
+                  <i class="fa fa-trash-o"></i>
+                </button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>
+              <a href="/acessiories" class="btn btn-warning btn-sm">
+                <i class="fa fa-angle-left"></i> Continue Shopping
+              </a>
+            </td>
+            <td colspan="2"></td>
+            <td class="text-center" id="cart-total"><strong>Total $0.00</strong></td>
+            <td>
+              <a href="/checkout" class="btn btn-success btn-sm w-100">
+                Checkout <i class="fa fa-angle-right"></i>
+              </a>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+   <!--Mobile Card View -->
+  <div class="d-block d-md-none">
+  <% cartItems.forEach((item, index) => { %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <div class="d-flex align-items-center gap-3 mb-2">
+        <img src="<%= item.item_img %>" alt="Image" class="img-thumbnail" style="width: 64px; height: 64px; object-fit: cover;" />
+        <div class="flex-grow-1">
+          <h6 class="mb-1"><%= item.item_Name %></h6>
+          <small class="text-muted description-text" title="<%= item.item_description %>">
+            <%= item.item_description %>
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-2"><strong>Price:</strong> <span class="item-price">$<%= item.item_price %></span></div>
+
+      <div class="input-group quantity-group mb-2">
+        <button type="button" class="btn btn-outline-secondary btn-qty-minus" data-index="<%= index %>">-</button>
+        <input type="number" class="form-control text-center quantity-input" value="1" min="1" max="20" data-index="<%= index %>" readonly />
+        <button type="button" class="btn btn-outline-secondary btn-qty-plus" data-index="<%= index %>">+</button>
+      </div>
+
+      <div class="mb-2"><strong>Subtotal:</strong> <span class="item-subtotal">$0.00</span></div>
+
+      <form action="/delete/<%= item.id %>" method="POST" class="mt-2">
+        <button class="btn btn-sm btn-danger w-100" title="Remove">
+          <i class="fa fa-trash-o"></i> Remove
+        </button>
+      </form>
+    </div>
+  </div>
+  <% }) %>
+
+  <div class="d-flex justify-content-between align-items-center mt-3">
+    <a href="/acessiories" class="btn btn-warning btn-sm">
+      <i class="fa fa-angle-left"></i> Continue Shopping
+    </a>
+    <a href="/checkout" class="btn btn-success btn-sm">
+      Checkout <i class="fa fa-angle-right"></i>
+    </a>
+  </div>
+  <div class="text-center mt-3" id="cart-total">
+    <strong>Total $0.00</strong>
+  </div>
+</div>
+  </div>
+<% } %>
+
+<!-- scripts  -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // For each cart row/card, bind the plus/minus buttons to their corresponding quantity/subtotal/price
+    function updateTotal() {
+      let total = 0;
+      document.querySelectorAll(".item-subtotal").forEach((subtotal) => {
+        total += parseFloat(subtotal.innerText.replace("$", "").trim());
+      });
+      document.querySelectorAll("#cart-total").forEach((el) => {
+        el.innerHTML = "<strong>Total $" + total.toFixed(2) + "</strong>";
+      });
+      localStorage.setItem("cartTotal", total.toFixed(2));
+    }
+
+    // Helper to update subtotal for a given row/card
+    function updateSubtotal(row) {
+      const priceEl = row.querySelector(".item-price");
+      const qtyInput = row.querySelector(".quantity-input");
+      const subtotalEl = row.querySelector(".item-subtotal");
+      if (priceEl && qtyInput && subtotalEl) {
+        const price = parseFloat(priceEl.innerText.replace("$", "").trim());
+        const quantity = parseInt(qtyInput.value);
+        const subtotal = price * quantity;
+        subtotalEl.innerText = "$" + subtotal.toFixed(2);
+        updateTotal();
+      }
+    }
+
+    // Table rows
+    document.querySelectorAll("table#cart tbody tr").forEach((row) => {
+      const minusBtn = row.querySelector(".btn-qty-minus");
+      const plusBtn = row.querySelector(".btn-qty-plus");
+      const qtyInput = row.querySelector(".quantity-input");
+      minusBtn?.addEventListener("click", function () {
+        let value = parseInt(qtyInput.value);
+        if (value > 1) {
+          qtyInput.value = value - 1;
+          updateSubtotal(row);
+        }
+      });
+      plusBtn?.addEventListener("click", function () {
+        let value = parseInt(qtyInput.value);
+        if (value < 20) {
+          qtyInput.value = value + 1;
+          updateSubtotal(row);
+        }
+      });
+      qtyInput?.addEventListener("keydown", function (e) {
+        e.preventDefault();
+      });
+      // Initial subtotal
+      updateSubtotal(row);
+    });
+
+    // Mobile cards
+    document.querySelectorAll(".card").forEach((card) => {
+      const minusBtn = card.querySelector(".btn-qty-minus");
+      const plusBtn = card.querySelector(".btn-qty-plus");
+      const qtyInput = card.querySelector(".quantity-input");
+      minusBtn?.addEventListener("click", function () {
+        let value = parseInt(qtyInput.value);
+        if (value > 1) {
+          qtyInput.value = value - 1;
+          updateSubtotal(card);
+        }
+      });
+      plusBtn?.addEventListener("click", function () {
+        let value = parseInt(qtyInput.value);
+        if (value < 20) {
+          qtyInput.value = value + 1;
+          updateSubtotal(card);
+        }
+      });
+      qtyInput?.addEventListener("keydown", function (e) {
+        e.preventDefault();
+      });
+      // Initial subtotal
+      updateSubtotal(card);
+    });
+
+    // Save quantities on checkout (if you have a checkout button with id="checkout-button")
+    document.querySelectorAll("#checkout-button").forEach((btn) => {
+      btn?.addEventListener("click", function () {
+        const quantities = Array.from(document.querySelectorAll(".quantity-input")).map((input) => input.value);
+        localStorage.setItem("quantities", JSON.stringify(quantities));
+      });
+    });
+
+    // Initial total
+    updateTotal();
+  });
+</script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    src="https://kit.fontawesome.com/542d90fccf.js"
+    crossorigin="anonymous"
+  ></script>
+
+</html>

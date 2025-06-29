@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg version="1.1" id="Taxi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1008.19 999.41" style="enable-background:new 0 0 1008.19 999.41;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFB500;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;stroke:#FFB500;stroke-width:78;stroke-miterlimit:10;}
+</style>
+<rect x="29.68" y="25.29" class="st0" width="948.82" height="948.82"/>
+<rect x="29.68" y="448.82" class="st1" width="948.82" height="101.76"/>
+<g>
+	<path class="st2" d="M442.85,353.69h-151.9v-105h426.3v105h-151.9v395.5h-122.5V353.69z"/>
+</g>
+<g>
+	<path class="st1" d="M442.85,353.69h-151.9v-105h426.3v105h-151.9v395.5h-122.5V353.69z"/>
+</g>
+</svg>

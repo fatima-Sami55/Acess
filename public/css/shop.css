@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+MX:wght@100..400&display=swap');
+
+html {
+  height: auto;
+  width: auto;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+
+}
+
+body{
+  height: auto;
+  width: auto;
+  margin: 0;
+  scroll-behavior: smooth !important;
+}
+
+:root {
+  --animationSpeed: 40s;
+}
+
+.hero-slider {
+  padding-top: 100px;
+}
+
+.hero-slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  max-height: 80vh; 
+}
+
+@media (max-width: 768px) {
+  .hero-slider img {
+    max-height: 60vh;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.slide-track {
+  display: flex;
+  width: max-content;
+  animation: scroll var(--animationSpeed) linear infinite;
+  gap: 20px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+  width: 180px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .slide img {
+    width: 120px;
+  }
+
+  .slide-track {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide img {
+    width: 90px;
+  }
+}
+
+/* ================= Product Card Layout ================== */
+
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= Card Image ================== */
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 150px;
+  }
+}
+
+/* ================= Card Text ================== */
+
+.product-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.product-price {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #28a745;
+}
+
+/* ================= Card Button ================== */
+
+.card-btn {
+  width: 100%;
+  margin-top: auto;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* ================= Responsive Grid ================== */
+
+@media (max-width: 768px) {
+  .product-name {
+    font-size: 1rem;
+  }
+
+  .product-price {
+    font-size: 0.95rem;
+  }
+
+  .product-description {
+    font-size: 0.85rem;
+  }
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.chart li a {
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.chart li a:hover {
+  text-decoration: underline !important;
+}
+
+/* Image hover effect on blog */
+.mask {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.mask:hover .blog-image {
+  filter: brightness(70%);
+}
+
+.blog-image {
+  height: 200px;
+  width: 200px;
+  transition: filter 0.3s ease;
+  object-fit: cover;
+}
+
+.vertical-line {
+  border-left: 2px solid white;
+  height: 200px;
+  margin: 0 30px;
+  display: none; /* hidden by default */
+}
+
+@media (min-width: 992px) {
+  .vertical-line {
+    display: block;
+  }
+}
+
+/* Responsive spacing for smaller screens */
+@media (max-width: 768px) {
+  .blog-image {
+    height: 150px;
+    width: 150px;
+  }
+
+  .chart {
+    font-size: 16px;
+  }
+
+  .chart li {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* Footer */
+.main-footer {
+    background: #f8f9fa;
+    padding: 30px 0px 20px 0px;
+}
+
+footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Copy Right Footer */
+.footer-copyright {
+    background: rgb(15, 15, 15);
+}
+
+.footer-copyright .logo {
+    display: inherit;
+}
+
+.footer-copyright nav {
+    float: right;
+    margin-top: 5px;
+}
+
+.footer-copyright nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-copyright nav ul li {
+    border-left: 1px solid #141313;
+    display: inline-block;
+    line-height: 12px;
+    margin: 0;
+    padding: 0 8px;
+}
+
+.footer-copyright nav ul li a {
+    color: #000000;
+}
+
+.footer-copyright nav ul li:first-child {
+    border: medium none;
+    padding-left: 0;
+}
+
+.footer-copyright p {
+    color: #ffffff;
+    margin: 2px 0 0;
+}
+
+/* Footer Top */
+.footer-top {
+    background: #e2e2e2;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid rgb(234, 230, 230);
+}
+
+/* Footer transparent */
+footer.transparent .footer-top,
+footer.transparent .main-footer {
+    background: transparent;
+}
+
+footer.transparent .footer-copyright {
+    background: none repeat scroll 0 0 rgb(171, 166, 166);
+}
+
+/* Footer light */
+footer.light .footer-top {
+    background: #100f0f;
+}
+
+footer.light .main-footer {
+    background: #000000;
+}
+
+footer.light .footer-copyright {
+    margin: 0;
+    background: none repeat scroll 0 0 rgba(14, 13, 13, 0.903);
+}
+
+/* Footer 4 */
+.footer- .logo {
+    display: inline-block;
+}
+
+.widget {
+    padding: 10px;
+}
+
+.widget.widget-last {
+    margin-bottom: 0px;
+}
+
+.widget.no-box {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+}
+
+
+.widget li a {
+    color: #000000;
+}
+
+.widget li a:hover {
+    color: #aeaeae;
+}
+
+.widget-title span {
+    background: #ebeff1 none repeat scroll 0 0;
+    display: block;
+    height: 1px;
+    margin-top: 25px;
+    position: relative;
+    width: 20%;
+}
+
+.widget-title span::after {
+    background: inherit;
+    content: "";
+    height: inherit;
+    position: absolute;
+    top: -4px;
+    width: 50%;
+}
+
+.widget-title.text-center span,
+.widget-title.text-center span::after {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.widget .badge {
+    float: right;
+    background: #eceaea;
+}
+
+.typo-light h1,
+.typo-light h2,
+.typo-light h3,
+.typo-light h4,
+.typo-light h5,
+.typo-light h6,
+.typo-light p,
+.typo-light div,
+.typo-light span,
+.typo-light small {
+    color: rgb(12, 12, 12);
+}
+
+footer ul.social-footer2 {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+footer ul.social-footer2 li {
+    background-color: #141313;
+    display: inline-block;
+    padding: 0;
+}
+
+footer ul.social-footer2 li a:hover {
+    background-color: #aeaeae;
+}
+
+footer ul.social-footer2 li a {
+    display: block;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+}
+
+footer .btn {
+    background-color: #000000;
+    color: #fff;
+}
+
+footer .btn:hover,
+footer .btn:focus,
+footer .btn.active {
+    background: #81888e;
+    color: #fff;
+    -webkit-box-shadow: 0 15px 30px rgb(251, 247, 247);
+    -moz-box-shadow: 0 15px 30px rgb(251, 247, 247);
+    -ms-box-shadow: 0 15px 30px rgb(251, 247, 247);
+    -o-box-shadow: 0 15px 30px rgb(251, 247, 247);
+    box-shadow: 0 15px 30px rgb(251, 247, 247);
+    -webkit-transition: all 250ms ease-in-out 0s;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(108, 108, 108, 0.558);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(108, 108, 108, 0.896);
+}

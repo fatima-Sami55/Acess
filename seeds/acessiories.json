@@ -1,0 +1,462 @@
+{
+  "shoes": [
+    {
+      "id": 1,
+      "name": "Running Shoes",
+      "description": "Comfortable running shoes with breathable mesh and cushioned soles.",
+      "price": 89.99,
+      "image": "../image/acessiories/shoes/shoe1.avif",
+      "categories": "acessiories",
+      "style": "sporty"
+    },
+    {
+      "id": 2,
+      "name": "Sneakers",
+      "description": "Stylish sneakers for everyday wear, made from durable canvas.",
+      "price": 79.99,
+      "image": "../image/acessiories/shoes/shoe2.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 3,
+      "name": "Hiking Boots",
+      "description": "Waterproof hiking boots with ankle support and rugged tread.",
+      "price": 129.99,
+      "image": "../image/acessiories/shoes/shoe3.jpg",
+      "categories": "acessiories",
+      "style": "outdoor"
+    },
+    {
+      "id": 4,
+      "name": "Dress Shoes",
+      "description": "Classic leather dress shoes suitable for formal occasions.",
+      "price": 99.99,
+      "image": "../image/acessiories/shoes/shoe4.jpg",
+      "categories": "acessiories",
+      "style": "formal"
+    },
+    {
+      "id": 5,
+      "name": "Sandals",
+      "description": "Casual sandals with adjustable straps and cushioned footbed.",
+      "price": 49.99,
+      "image": "../image/acessiories/shoes/shoe5.jpg",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 6,
+      "name": "Athletic Shoes",
+      "description": "Versatile athletic shoes ideal for gym workouts or sports activities.",
+      "price": 69.99,
+      "image": "../image/acessiories/shoes/shoe6.avif",
+      "categories": "acessiories",
+      "style": "sporty"
+    },
+    {
+      "id": 7,
+      "name": "Flip Flops",
+      "description": "Comfortable flip flops with textured sole for better grip.",
+      "price": 19.99,
+      "image": "../image/acessiories/shoes/shoe7.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 8,
+      "name": "Winter Boots",
+      "description": "Insulated winter boots with faux fur lining and waterproof exterior.",
+      "price": 149.99,
+      "image": "../image/acessiories/shoes/shoe8.avif",
+      "categories": "acessiories",
+      "style": "outdoor"
+    },
+    {
+      "id": 9,
+      "name": "Slip-On Shoes",
+      "description": "Easy slip-on shoes with elastic gore panels for a comfortable fit.",
+      "price": 59.99,
+      "image": "../image/acessiories/shoes/shoe9.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 10,
+      "name": "Trail Shoes",
+      "description": "Lightweight trail running shoes with breathable upper and rugged outsole.",
+      "price": 109.99,
+      "image": "../image/acessiories/shoes/shoe10.avif",
+      "categories": "acessiories",
+      "style": "outdoor"
+    }
+  ],
+  "watches": [
+    {
+      "id": 1,
+      "name": "Classic Analog Watch",
+      "description": "Elegant analog watch with stainless steel case and leather strap.",
+      "price": 149.99,
+      "image": "../image/acessiories/watches/watch1.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 2,
+      "name": "Digital Sports Watch",
+      "description": "Water-resistant digital sports watch with stopwatch and alarm functions.",
+      "price": 79.99,
+      "image": "../image/acessiories/watches/watch2.avif",
+      "categories": "acessiories",
+      "style": "sporty"
+    },
+    {
+      "id": 3,
+      "name": "Smart Fitness Tracker",
+      "description": "Smartwatch with heart rate monitor, GPS, and customizable watch faces.",
+      "price": 199.99,
+      "image": "../image/acessiories/watches/watch3.avif",
+      "categories": "acessiories",
+      "style": "sporty"
+    },
+    {
+      "id": 4,
+      "name": "Luxury Chronograph Watch",
+      "description": "Luxurious chronograph watch with multiple dials and date display.",
+      "price": 299.99,
+      "image": "../image/acessiories/watches/watch4.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 5,
+      "name": "Casual Leather Watch",
+      "description": "Casual watch with genuine leather strap and minimalist design.",
+      "price": 99.99,
+      "image": "../image/acessiories/watches/watch5.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 6,
+      "name": "Diving Watch",
+      "description": "Durable diving watch with rotating bezel and luminous hands.",
+      "price": 249.99,
+      "image": "../image/acessiories/watches/watch6.avif",
+      "categories": "acessiories",
+      "style": "sporty"
+    },
+    {
+      "id": 7,
+      "name": "Fashionable Bracelet Watch",
+      "description": "Fashionable bracelet watch with crystal-studded bezel and stainless steel band.",
+      "price": 129.99,
+      "image": "../image/acessiories/watches/watch7.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 8,
+      "name": "Aviator Pilot Watch",
+      "description": "Aviator-style pilot watch with large numerals and leather strap.",
+      "price": 179.99,
+      "image": "../image/acessiories/watches/watch8.jpeg",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 9,
+      "name": "Solar-Powered Watch",
+      "description": "Environmentally friendly solar-powered watch with metal bracelet.",
+      "price": 159.99,
+      "image": "../image/acessiories/watches/watch9.jpeg",
+      "categories": "acessiories",
+      "style": "sporty"
+    },
+    {
+      "id": 10,
+      "name": "Dual Time Zone Watch",
+      "description": "Dual time zone watch with separate dials for home and travel times.",
+      "price": 139.99,
+      "image": "../image/acessiories/watches/watch10.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    }
+  ],
+  "glasses": [
+    {
+      "id": 1,
+      "name": "Aviator Sunglasses",
+      "description": "Classic aviator sunglasses with metal frame and UV protection lenses.",
+      "price": 59.99,
+      "image": "../image/acessiories/glasses/glass1.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 2,
+      "name": "Round Frame Glasses",
+      "description": "Trendy round frame glasses with clear lenses, suitable for everyday wear.",
+      "price": 49.99,
+      "image": "../image/acessiories/glasses/glass2.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 3,
+      "name": "Cat Eye Sunglasses",
+      "description": "Fashionable cat eye sunglasses with gradient lenses for a chic look.",
+      "price": 69.99,
+      "image": "../image/acessiories/glasses/glass3.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 4,
+      "name": "Rectangular Glasses",
+      "description": "Rectangular shaped glasses with lightweight frame for comfort.",
+      "price": 54.99,
+      "image": "../image/acessiories/glasses/glass4.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 5,
+      "name": "Sport Sunglasses",
+      "description": "Sporty sunglasses with wrap-around design and polarized lenses.",
+      "price": 79.99,
+      "image": "../image/acessiories/glasses/glass5.jpg",
+      "categories": "acessiories",
+      "style": "sporty"
+    },
+    {
+      "id": 6,
+      "name": "Vintage Round Sunglasses",
+      "description": "Vintage style round sunglasses with tinted lenses for a retro look.",
+      "price": 64.99,
+      "image": "../image/acessiories/glasses/glass6.avif",
+      "categories": "acessiories",
+      "style": "traditional"
+    },
+    {
+      "id": 7,
+      "name": "Polarized Sunglasses",
+      "description": "High-performance polarized sunglasses with anti-glare lenses.",
+      "price": 89.99,
+      "image": "../image/acessiories/glasses/glass7.avif",
+      "categories": "acessiories",
+      "style": "sporty"
+    },
+    {
+      "id": 8,
+      "name": "Clear Lens Glasses",
+      "description": "Stylish clear lens glasses with durable acetate frame.",
+      "price": 44.99,
+      "image": "../image/acessiories/glasses/glass8.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 9,
+      "name": "Wayfarer Sunglasses",
+      "description": "Iconic wayfarer sunglasses with high-quality lenses for UV protection.",
+      "price": 74.99,
+      "image": "../image/acessiories/glasses/glass9.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 10,
+      "name": "Reading Glasses",
+      "description": "Lightweight reading glasses with spring hinges for a comfortable fit.",
+      "price": 29.99,
+      "image": "../image/acessiories/glasses/glass10.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    }
+  ],
+  "caps": [
+    {
+      "id": 1,
+      "name": "Baseball Cap",
+      "description": "Classic baseball cap with adjustable strap and embroidered logo.",
+      "price": 24.99,
+      "image": "../image/acessiories/caps/cap1.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 2,
+      "name": "Trucker Hat",
+      "description": "Mesh back trucker hat with snapback closure and bold front design.",
+      "price": 19.99,
+      "image": "../image/acessiories/caps/cap2.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 3,
+      "name": "Sun Hat",
+      "description": "Wide-brim sun hat with UV protection, perfect for outdoor activities.",
+      "price": 29.99,
+      "image": "../image/acessiories/caps/cap3.avif",
+      "categories": "acessiories",
+      "style": "outdoor"
+    },
+    {
+      "id": 4,
+      "name": "Snapback Cap",
+      "description": "Stylish snapback cap with flat brim and adjustable strap.",
+      "price": 22.99,
+      "image": "../image/acessiories/caps/cap4.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 5,
+      "name": "Bucket Hat",
+      "description": "Versatile bucket hat with reversible design and breathable fabric.",
+      "price": 18.99,
+      "image": "../image/acessiories/caps/cap5.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 6,
+      "name": "Beanie",
+      "description": "Cozy knit beanie with fold-over cuff, available in various colors.",
+      "price": 14.99,
+      "image": "../image/acessiories/caps/cap6.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 7,
+      "name": "Fedora Hat",
+      "description": "Classic fedora hat with pinched crown and grosgrain ribbon.",
+      "price": 39.99,
+      "image": "../image/acessiories/caps/cap7.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 8,
+      "name": "Visor Cap",
+      "description": "Lightweight visor cap with adjustable strap and moisture-wicking fabric.",
+      "price": 16.99,
+      "image": "../image/acessiories/caps/cap8.avif",
+      "categories": "acessiories",
+      "style": "sporty"
+    },
+    {
+      "id": 9,
+      "name": "Newsboy Cap",
+      "description": "Vintage-inspired newsboy cap with 8-panel design and button top.",
+      "price": 27.99,
+      "image": "../image/acessiories/caps/cap9.jpg",
+      "categories": "acessiories",
+      "style": "traditional"
+    },
+    {
+      "id": 10,
+      "name": "Military Cap",
+      "description": "Tactical military cap with adjustable strap and patch panel.",
+      "price": 25.99,
+      "image": "../image/acessiories/caps/cap10.jpg",
+      "categories": "acessiories",
+      "style": "sporty"
+    }
+  ],
+  "lipsticks":[
+    {
+      "id": 1,
+      "name": "Matte Lipstick",
+      "description": "Long-lasting matte lipstick with intense color payoff.",
+      "price": 14.99,
+      "image": "../image/acessiories/lipsticks/lip1.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 2,
+      "name": "Satin Lipstick",
+      "description": "Creamy satin lipstick that glides on smoothly and hydrates lips.",
+      "price": 16.99,
+      "image": "../image/acessiories/lipsticks/lip2.avif",
+      "categories": "acessiories",
+      "style": "traditional"
+    },
+    {
+      "id": 3,
+      "name": "Glossy Lipstick",
+      "description": "High-shine glossy lipstick with a sheer finish and comfortable wear.",
+      "price": 12.99,
+      "image": "../image/acessiories/lipsticks/lip3.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 4,
+      "name": "Liquid Lipstick",
+      "description": "Smudge-proof liquid lipstick with a matte finish and long-lasting formula.",
+      "price": 18.99,
+      "image": "../image/acessiories/lipsticks/lip4.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 5,
+      "name": "Sheer Lipstick",
+      "description": "Lightweight sheer lipstick that provides a hint of color and shine.",
+      "price": 13.99,
+      "image": "../image/acessiories/lipsticks/lip5.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 6,
+      "name": "Metallic Lipstick",
+      "description": "Bold metallic lipstick with a shimmering finish for a dramatic look.",
+      "price": 15.99,
+      "image": "../image/acessiories/lipsticks/lip6.avif",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 7,
+      "name": "Nude Lipstick",
+      "description": "Perfect nude lipstick that complements all skin tones.",
+      "price": 11.99,
+      "image": "../image/acessiories/lipsticks/lip7.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 8,
+      "name": "Red Lipstick",
+      "description": "Classic red lipstick that provides intense color and a smooth finish.",
+      "price": 17.99,
+      "image": "../image/acessiories/lipsticks/lip8.jpg",
+      "categories": "acessiories",
+      "style": "classic"
+    },
+    {
+      "id": 9,
+      "name": "Plumping Lipstick",
+      "description": "Lip plumping lipstick with a glossy finish for fuller-looking lips.",
+      "price": 19.99,
+      "image": "../image/acessiories/lipsticks/lip9.avif",
+      "categories": "acessiories",
+      "style": "casual"
+    },
+    {
+      "id": 10,
+      "name": "Long-Wear Lipstick",
+      "description": "Transfer-proof long-wear lipstick that stays vibrant all day.",
+      "price": 20.99,
+      "image": "../image/acessiories/lipsticks/lip10.jpg",
+      "categories": "acessiories",
+      "style": "classic"
+    }
+  ]
+}

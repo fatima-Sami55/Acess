@@ -1,0 +1,684 @@
+<style>
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 1100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+header.nav-after {
+  top: 0;
+}
+
+/* Add extra offset if verification flash is shown */
+header.offset-top {
+  top: 60px; 
+}
+
+@media (max-width: 804px) {
+ body.unverified header.nav-after {
+    top: 120px !important;
+  }
+
+  .banner {
+    margin-top: 200px; 
+  }
+}
+
+
+@media (max-width: 360px) {
+  body.unverified header.nav-after {
+    top: 130px !important;
+  }
+}
+
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  margin-left: 50px;
+}
+
+header .logo h1,
+header h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 24px;
+  margin: 0;
+  color: black;
+}
+
+/* ======================== Nav Links ======================== */
+header ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  flex: 2;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-weight: 700;
+  color: rgb(3, 3, 3);
+  text-transform: uppercase;
+  padding: 10px 15px;
+  transition: 0.2s ease-in-out;
+}
+
+header ul li.no-border a:hover {
+  border-bottom: none !important;
+}
+
+#user:hover {
+  border-bottom: none !important;
+}
+
+
+header ul li a:hover {
+  border-bottom: 2px solid rgb(19, 18, 18);
+  color: #090909;
+}
+
+
+/* ======================== Dropdown ======================== */
+.dropdown-toggle::after {
+  content: none;
+}
+
+.dropdown-item:hover {
+  background-color: #eee;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+header .dropdown-menu {
+  min-width: 150px;
+}
+
+header .dropdown-item:active,
+header .dropdown-item:visited {
+  background-color: transparent;
+}
+
+/* ======================== Search Bar ======================== */
+.search-container {
+  margin-top: 10px;
+}
+
+.search-form .form-group {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 25px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 0.35s;
+  box-shadow: 0 1px 1px rgba(62, 57, 57, 0.744) inset;
+}
+
+.search-form .form-group input.form-control {
+  width: 0;
+  padding-right: 20px;
+  border: none;
+  background: white;
+  color: black;
+  transition: width 0.35s ease;
+}
+
+.search-form .form-group input.form-control:focus,
+.search-form .form-group:hover input.form-control {
+  width: 300px;
+  border-radius: 25px 4px 4px 25px;
+  background-color: #e3e3e4;
+}
+
+.search-form .form-group span.form-control-feedback {
+  position: absolute;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  color: black;
+  cursor: pointer;
+}
+
+/* ======================== Hamburger Icon ======================== */
+#chk1 {
+  display: none;
+}
+
+.menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+}
+
+/* ======================== User Image / Cart ======================== */
+#user-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: none;
+}
+
+#cart {
+  margin-left: 10px;
+}
+
+body.unverified .banner {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  margin-top: 100px;
+}
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+    align-items: flex-start;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001; /* so it's always above the nav */
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 100px; /* default for verified users */
+    right: -100%;
+    background-color: white;
+    width: 60%;
+    height: calc(100vh - 100px);
+    transition: right 0.5s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.05);
+    padding-top: 40px;
+    gap: 50px;
+  }
+
+  body.unverified header ul {
+    top: 130px; /* push nav lower if flash is showing */
+    height: calc(100vh - 130px);
+  }
+
+  #chk1:checked ~ ul {
+    right: 0;
+  }
+
+  .search-form .form-group:hover input.form-control,
+  .search-form .form-group input.form-control:focus {
+    width: 250px;
+  }
+}
+
+</style>
+<!-- Flash inline styling -->
+<%
+  let headerClass = 'nav-after';
+  if (page === 'home' && !isVerified) {
+    headerClass += ' offset-top';
+  }
+%>
+<!-- If logged in -->
+<% if (isLoggedIn) { %> 
+  <% if (success.length > 0 ) {%>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <%= success %>
+  <alert
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></alert>
+</div>
+<% } %> 
+<% if (error.length > 0 ) {%>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%= error %>
+  <alert
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></alert>
+</div>
+<% } %>
+<!-- header -->
+<header id="navbar" class="<%= headerClass %>">
+  <div class="logo">
+    <h3>
+      <a
+        href="/home"
+        class="flex items-center space-x-3 rtl:space-x-reverse"
+        style="text-decoration: none; color: black"
+      >
+        <img
+          src="../image/Acess logo/logo.png"
+          class="h-8"
+          alt="Acess Logo"
+          style="width: 60px; height: 60px"
+        />
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >Acess</span
+        >
+      </a>
+    </h3>
+  </div>
+  <input type="checkbox" id="chk1" />
+  <label for="chk1" class="menu">
+    <i class="fa fa-bars" style="color: black;"></i>
+  </label>
+
+  <ul class="nav-links">
+    <div class="search-container">
+      <form action="/search" class="search-form" method="get">
+        <div class="form-group has-feedback">
+          <label for="search" class="sr-only">Search</label>
+          <input
+            type="text"
+            class="form-control"
+            name="search"
+            id="search"
+            placeholder="search"
+            style="color: black"
+          />
+          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+          <span class="glyphicon glyphicon-search form-control-feedback">
+            <i class="fa fa-search" style="color: black"></i>
+          </span>
+        </div>
+      </form>
+    </div>
+    <% if (page === 'home') { %>
+    <li class="link"><a href="/shop">Shop</a></li>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <li class="link">
+      <a
+        href="/about"
+        id="info"
+        class="dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        >Info</a
+      >
+
+      <div class="dropdown-menu" style="min-width: 100px">
+        <a class="dropdown-item" href="/about">
+          <div style="display: flex; justify-content: space-between">
+            <div><p>ABOUST US</p></div>
+         
+          </div>
+        </a>
+        <a class="dropdown-item" href="/contact">
+          <div style="display: flex; justify-content: space-between">
+            <div><p>Contact us</p></div>
+          
+          </div>
+        </a>
+      
+    </li>
+    <% } else if (page === 'acessiories') { %>
+    <li class="link"><a href="/home">Home</a></li>
+    <li class="link"><a href="/shop">Shop</a></li>
+    <li class="link">
+      <a
+        href="/about"
+        id="info"
+        class="dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        >Info</a
+      >
+
+      <div class="dropdown-menu" style="min-width: 100px">
+        <a class="dropdown-item" href="/about">
+          <div style="display: flex; justify-content: space-between">
+            <div><p>ABOUST US</p></div>
+         
+          </div>
+        </a>
+        <a class="dropdown-item" href="/contact">
+          <div style="display: flex; justify-content: space-between">
+            <div><p>Contact us</p></div>
+          
+          </div>
+        </a>
+      
+    </li>
+    <% } else if (page === 'about') { %>
+    <li class="link"><a href="/home">Home</a></li>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <li class="link">
+      <a
+        href="/about"
+        id="info"
+        class="dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        >Info</a
+      >
+
+         <div class="dropdown-menu" style="min-width: 100px">
+        <a class="dropdown-item" href="/contact">
+          <div style="display: flex; justify-content: space-between">
+            <div><p>Contact us</p></div>
+          
+          </div>
+        </a>
+        </div>
+      
+    </li>
+    <% } else if (page === 'contact') { %>
+    <li class="link"><a href="/home">Home</a></li>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <li class="link">
+      <a
+        href="/about"
+        id="info"
+        class="dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        >Info</a
+      >
+
+      <div class="dropdown-menu" style="min-width: 100px">
+        <a class="dropdown-item" href="/about">
+          <div style="display: flex; justify-content: space-between">
+            <div><p>ABOUST US</p></div>
+         
+          </div>
+        </a>
+       
+      
+    </li>
+    <% } else if (page === 'Product') { %>
+    <li class="link"><a href="/home">Home</a></li>
+    <li class="link"><a href="/shop">Shop</a></li>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <% } else if (page === 'edit') { %>
+    <li class="link"><a href="/home">Home</a></li>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <li class="link">
+      <a
+        href="/about"
+        id="info"
+        class="dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        >Info</a
+      >
+
+      <div class="dropdown-menu" style="min-width: 100px">
+        <a class="dropdown-item" href="/about">
+          <div style="display: flex; justify-content: space-between">
+            <div><p>ABOUST US</p></div>
+         
+          </div>
+        </a>
+        <a class="dropdown-item" href="/contact">
+          <div style="display: flex; justify-content: space-between">
+            <div><p>Contact us</p></div>
+          
+          </div>
+        </a>
+      
+    </li>
+    <% } else if (page === 'login') { %>
+    <li class="link"><a href="/home">Home</a></li>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <li class="link">
+      <a
+        href="/about"
+        id="info"
+        class="dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        >Info</a
+      >
+
+      <div class="dropdown-menu" style="min-width: 100px">
+        <a class="dropdown-item" href="/about">
+          <div style="display: flex; justify-content: space-between">
+            <div><p>ABOUST US</p></div>
+         
+          </div>
+        </a>
+        <a class="dropdown-item" href="/contact">
+          <div style="display: flex; justify-content: space-between">
+            <div><p>Contact us</p></div>
+          
+          </div>
+        </a>
+      
+    </li>
+    <% } %>
+    <li>
+      <div class="btn-group position-relative no-border">
+        <a
+          href="#"
+          id="user"
+          class="dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <img
+            id="user-img"
+            class="rounded-pill"
+            src="<%= loggedInUser.img %>"
+            alt="user photo"
+          />
+        </a>
+        <div class="dropdown-menu" style="min-width: 300px">
+          <a class="dropdown-item" href="/user-profile">
+            <div style="display: flex; justify-content: space-between">
+              <div><p>View Account</p></div>
+              <div>
+                <i class="material-icons" style="font-size: 25px"
+                  >account_circle</i
+                >
+              </div>
+            </div>
+          </a>
+          <a class="dropdown-item" href="/inbox">
+            <div style="display: flex; justify-content: space-between">
+              <div><p>View Notices</p></div>
+              <div>
+                <span
+                  class="badge rounded-pill bg-danger notification-counter"
+                  style="font-size: 12px"
+                  ><%= notificationCount %><span class="visually-hidden"
+                    >items for notice</span
+                  ></span
+                >
+              </div>
+            </div>
+          </a>
+          <a class="dropdown-item" href="/wish">
+            <div style="display: flex; justify-content: space-between">
+              <div><p>View Wishlist</p></div>
+              <div>
+                <span
+                  class="badge rounded-pill bg-danger notification-counter"
+                  style="font-size: 12px"
+                  ><%= wishItemsCount %><span class="visually-hidden"
+                    >items in wishlist</span
+                  ></span
+                >
+              </div>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/logout">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <div style="margin-right: 10px">
+                <i class="material-icons" style="font-size: 30px">logout</i>
+              </div>
+              <div><p style="margin-bottom: 0">Logout</p></div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <a href="/add-to-cart" class="position-relative" id="cart">
+        <i class="material-icons" style="font-size: 30px">shopping_cart</i>
+        <span
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger notification-counter"
+        >
+          <%= cartItemsCount %>
+          <span class="visually-hidden">items in cart</span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</header>
+
+
+<!-- If not logged in -->
+<% } %> <% if (!isLoggedIn) { %> 
+  <% if (success.length > 0 ) {%>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <%= success %>
+  <alert
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></alert>
+</div>
+<% } %> <% if (error.length > 0 ) {%>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%= error %>
+  <alert
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></alert>
+</div>
+<% } %>
+<!-- header -->
+<header id="navbar" class="nav-after" class="<%= headerClass %>">
+  <div class="logo">
+    <h3>
+      <a
+        href="/home"
+        class="flex items-center space-x-3 rtl:space-x-reverse"
+        style="text-decoration: none; color: black"
+      >
+        <img
+          src="../image/Acess logo/logo.png"
+          class="h-8"
+          alt="Acess Logo"
+          style="width: 60px; height: 60px"
+        />
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >Acess</span
+        >
+      </a>
+    </h3>
+  </div>
+    <input type="checkbox" id="chk1" />
+  <label for="chk1" class="menu">
+    <i class="fa fa-bars" style="color: black;"></i>
+  </label>
+  <ul class="nav-links">
+    <div class="search-container">
+      <form action="/search" class="search-form">
+        <div class="form-group has-feedback">
+          <label for="search" class="sr-only">Search</label>
+          <input
+            type="text"
+            class="form-control"
+            name="search"
+            id="search"
+            placeholder="search"
+            style="color: black"
+          />
+          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+          <span class="glyphicon glyphicon-search form-control-feedback">
+            <i class="fa fa-search" style="color: black"></i>
+          </span>
+        </div>
+      </form>
+    </div>
+    <% if (page === 'home') { %>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <li class="link"><a href="/contact">Contact</a></li>
+    <li class="link"><a href="/about">About Us</a></li>
+    <li class="link"><a href="/shop">Shop</a></li>
+    <% } else if (page === 'acessiories') { %>
+    <li class="link"><a href="/home">Home</a></li>
+     <li class="link"><a href="/shop">Shop</a></li>
+    <li class="link"><a href="/contact">Contact</a></li>
+    <li class="link"><a href="/about">About Us</a></li>
+    <% } else if (page === 'about') { %>
+    <li class="link"><a href="/home">Home</a></li>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <li class="link"><a href="/contact">Contact</a></li>
+     <li class="link"><a href="/shop">Shop</a></li>
+    <% } else if (page === 'contact') { %>
+    <li class="link"><a href="/home">Home</a></li>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <li class="link"><a href="/about">About Us</a></li>
+     <li class="link"><a href="/shop">Shop</a></li>
+    <% } else if (page === 'Product') { %>
+    <li class="link"><a href="/home">Home</a></li>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <li class="link"><a href="/about">About Us</a></li>
+    <% } else if (page === 'edit') { %>
+    <li class="link"><a href="/home">Home</a></li>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <li class="link"><a href="/about">About Us</a></li>
+     <li class="link"><a href="/shop">Shop</a></li>
+    <% } else if (page === 'login') { %>
+    <li class="link"><a href="/home">Home</a></li>
+    <li class="link"><a href="/acessiories">Acessiories</a></li>
+    <li class="link"><a href="/shop">Shop</a></li>
+    <% } %>
+  </ul>
+</header>
+<% } %>

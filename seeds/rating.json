@@ -1,0 +1,2356 @@
+{
+  "product-1": [
+    {
+      "stars": 5,
+      "count": 22
+    },
+    {
+      "stars": 4,
+      "count": 14
+    },
+    {
+      "stars": 3,
+      "count": 6
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "product-2": [
+    {
+      "stars": 5,
+      "count": 28
+    },
+    {
+      "stars": 4,
+      "count": 10
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "product-3": [
+    {
+      "stars": 5,
+      "count": 15
+    },
+    {
+      "stars": 4,
+      "count": 19
+    },
+    {
+      "stars": 3,
+      "count": 3
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "product-4": [
+    {
+      "stars": 5,
+      "count": 20
+    },
+    {
+      "stars": 4,
+      "count": 10
+    },
+    {
+      "stars": 3,
+      "count": 14
+    },
+    {
+      "stars": 2,
+      "count": 9
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "product-5": [
+    {
+      "stars": 5,
+      "count": 14
+    },
+    {
+      "stars": 4,
+      "count": 20
+    },
+    {
+      "stars": 3,
+      "count": 3
+    },
+    {
+      "stars": 2,
+      "count": 2
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "product-6": [
+    {
+      "stars": 5,
+      "count": 15
+    },
+    {
+      "stars": 4,
+      "count": 20
+    },
+    {
+      "stars": 3,
+      "count": 14
+    },
+    {
+      "stars": 2,
+      "count": 2
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "product-7": [
+    {
+      "stars": 5,
+      "count": 19
+    },
+    {
+      "stars": 4,
+      "count": 11
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 9
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "product-8": [
+    {
+      "stars": 5,
+      "count": 16
+    },
+    {
+      "stars": 4,
+      "count": 10
+    },
+    {
+      "stars": 3,
+      "count": 3
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "product-9": [
+    {
+      "stars": 5,
+      "count": 19
+    },
+    {
+      "stars": 4,
+      "count": 11
+    },
+    {
+      "stars": 3,
+      "count": 3
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "men-15": [
+    {
+      "stars": 5,
+      "count": 20
+    },
+    {
+      "stars": 4,
+      "count": 8
+    },
+    {
+      "stars": 3,
+      "count": 4
+    },
+    {
+      "stars": 2,
+      "count": 1
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "men-11": [
+    {
+      "stars": 5,
+      "count": 15
+    },
+    {
+      "stars": 4,
+      "count": 8
+    },
+    {
+      "stars": 3,
+      "count": 14
+    },
+    {
+      "stars": 2,
+      "count": 9
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "men-9": [
+    {
+      "stars": 5,
+      "count": 27
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 11
+    },
+    {
+      "stars": 2,
+      "count": 5
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "men-22": [
+    {
+      "stars": 5,
+      "count": 22
+    },
+    {
+      "stars": 4,
+      "count": 6
+    },
+    {
+      "stars": 3,
+      "count": 9
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "men-10": [
+    {
+      "stars": 5,
+      "count": 21
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 13
+    },
+    {
+      "stars": 2,
+      "count": 1
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "men-24": [
+    {
+      "stars": 5,
+      "count": 27
+    },
+    {
+      "stars": 4,
+      "count": 15
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 2
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "men-16": [
+    {
+      "stars": 5,
+      "count": 25
+    },
+    {
+      "stars": 4,
+      "count": 18
+    },
+    {
+      "stars": 3,
+      "count": 11
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "men-19": [
+    {
+      "stars": 5,
+      "count": 22
+    },
+    {
+      "stars": 4,
+      "count": 17
+    },
+    {
+      "stars": 3,
+      "count": 15
+    },
+    {
+      "stars": 2,
+      "count": 8
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "men-21": [
+    {
+      "stars": 5,
+      "count": 16
+    },
+    {
+      "stars": 4,
+      "count": 9
+    },
+    {
+      "stars": 3,
+      "count": 15
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "men-18": [
+    {
+      "stars": 5,
+      "count": 15
+    },
+    {
+      "stars": 4,
+      "count": 11
+    },
+    {
+      "stars": 3,
+      "count": 3
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "men-14": [
+    {
+      "stars": 5,
+      "count": 29
+    },
+    {
+      "stars": 4,
+      "count": 8
+    },
+    {
+      "stars": 3,
+      "count": 5
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "men-17": [
+    {
+      "stars": 5,
+      "count": 13
+    },
+    {
+      "stars": 4,
+      "count": 11
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "men-23": [
+    {
+      "stars": 5,
+      "count": 19
+    },
+    {
+      "stars": 4,
+      "count": 18
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "men-20": [
+    {
+      "stars": 5,
+      "count": 28
+    },
+    {
+      "stars": 4,
+      "count": 19
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "men-13": [
+    {
+      "stars": 5,
+      "count": 29
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 9
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "men-12": [
+    {
+      "stars": 5,
+      "count": 25
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 12
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "men-8": [
+    {
+      "stars": 5,
+      "count": 10
+    },
+    {
+      "stars": 4,
+      "count": 9
+    },
+    {
+      "stars": 3,
+      "count": 13
+    },
+    {
+      "stars": 2,
+      "count": 2
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "men-7": [
+    {
+      "stars": 5,
+      "count": 29
+    },
+    {
+      "stars": 4,
+      "count": 9
+    },
+    {
+      "stars": 3,
+      "count": 6
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "men-6": [
+    {
+      "stars": 5,
+      "count": 21
+    },
+    {
+      "stars": 4,
+      "count": 14
+    },
+    {
+      "stars": 3,
+      "count": 11
+    },
+    {
+      "stars": 2,
+      "count": 2
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "men-5": [
+    {
+      "stars": 5,
+      "count": 29
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 6
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "men-4": [
+    {
+      "stars": 5,
+      "count": 15
+    },
+    {
+      "stars": 4,
+      "count": 20
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "men-3": [
+    {
+      "stars": 5,
+      "count": 17
+    },
+    {
+      "stars": 4,
+      "count": 17
+    },
+    {
+      "stars": 3,
+      "count": 14
+    },
+    {
+      "stars": 2,
+      "count": 1
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "men-2": [
+    {
+      "stars": 5,
+      "count": 28
+    },
+    {
+      "stars": 4,
+      "count": 14
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "men-1": [
+    {
+      "stars": 5,
+      "count": 26
+    },
+    {
+      "stars": 4,
+      "count": 17
+    },
+    {
+      "stars": 3,
+      "count": 9
+    },
+    {
+      "stars": 2,
+      "count": 1
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "women-1": [
+    {
+      "stars": 5,
+      "count": 19
+    },
+    {
+      "stars": 4,
+      "count": 20
+    },
+    {
+      "stars": 3,
+      "count": 3
+    },
+    {
+      "stars": 2,
+      "count": 5
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "women-2": [
+    {
+      "stars": 5,
+      "count": 16
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 8
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "women-3": [
+    {
+      "stars": 5,
+      "count": 20
+    },
+    {
+      "stars": 4,
+      "count": 18
+    },
+    {
+      "stars": 3,
+      "count": 15
+    },
+    {
+      "stars": 2,
+      "count": 6
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "women-4": [
+    {
+      "stars": 5,
+      "count": 18
+    },
+    {
+      "stars": 4,
+      "count": 6
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "women-5": [
+    {
+      "stars": 5,
+      "count": 17
+    },
+    {
+      "stars": 4,
+      "count": 19
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "women-6": [
+    {
+      "stars": 5,
+      "count": 27
+    },
+    {
+      "stars": 4,
+      "count": 10
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "women-7": [
+    {
+      "stars": 5,
+      "count": 21
+    },
+    {
+      "stars": 4,
+      "count": 12
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "women-8": [
+    {
+      "stars": 5,
+      "count": 15
+    },
+    {
+      "stars": 4,
+      "count": 10
+    },
+    {
+      "stars": 3,
+      "count": 15
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "women-9": [
+    {
+      "stars": 5,
+      "count": 10
+    },
+    {
+      "stars": 4,
+      "count": 5
+    },
+    {
+      "stars": 3,
+      "count": 12
+    },
+    {
+      "stars": 2,
+      "count": 6
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "women-10": [
+    {
+      "stars": 5,
+      "count": 16
+    },
+    {
+      "stars": 4,
+      "count": 14
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "women-11": [
+    {
+      "stars": 5,
+      "count": 20
+    },
+    {
+      "stars": 4,
+      "count": 14
+    },
+    {
+      "stars": 3,
+      "count": 5
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "women-12": [
+    {
+      "stars": 5,
+      "count": 20
+    },
+    {
+      "stars": 4,
+      "count": 14
+    },
+    {
+      "stars": 3,
+      "count": 15
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "women-13": [
+    {
+      "stars": 5,
+      "count": 27
+    },
+    {
+      "stars": 4,
+      "count": 10
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 8
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "women-14": [
+    {
+      "stars": 5,
+      "count": 24
+    },
+    {
+      "stars": 4,
+      "count": 12
+    },
+    {
+      "stars": 3,
+      "count": 12
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "women-15": [
+    {
+      "stars": 5,
+      "count": 25
+    },
+    {
+      "stars": 4,
+      "count": 11
+    },
+    {
+      "stars": 3,
+      "count": 12
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "women-16": [
+    {
+      "stars": 5,
+      "count": 10
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 8
+    },
+    {
+      "stars": 2,
+      "count": 8
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "women-17": [
+    {
+      "stars": 5,
+      "count": 11
+    },
+    {
+      "stars": 4,
+      "count": 6
+    },
+    {
+      "stars": 3,
+      "count": 9
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "women-18": [
+    {
+      "stars": 5,
+      "count": 13
+    },
+    {
+      "stars": 4,
+      "count": 18
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 1
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "women-19": [
+    {
+      "stars": 5,
+      "count": 12
+    },
+    {
+      "stars": 4,
+      "count": 14
+    },
+    {
+      "stars": 3,
+      "count": 6
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "women-20": [
+    {
+      "stars": 5,
+      "count": 30
+    },
+    {
+      "stars": 4,
+      "count": 17
+    },
+    {
+      "stars": 3,
+      "count": 8
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "women-21": [
+    {
+      "stars": 5,
+      "count": 16
+    },
+    {
+      "stars": 4,
+      "count": 8
+    },
+    {
+      "stars": 3,
+      "count": 8
+    },
+    {
+      "stars": 2,
+      "count": 8
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "women-22": [
+    {
+      "stars": 5,
+      "count": 11
+    },
+    {
+      "stars": 4,
+      "count": 20
+    },
+    {
+      "stars": 3,
+      "count": 13
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "women-23": [
+    {
+      "stars": 5,
+      "count": 25
+    },
+    {
+      "stars": 4,
+      "count": 9
+    },
+    {
+      "stars": 3,
+      "count": 4
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "women-24": [
+    {
+      "stars": 5,
+      "count": 22
+    },
+    {
+      "stars": 4,
+      "count": 17
+    },
+    {
+      "stars": 3,
+      "count": 3
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-shoes-1": [
+    {
+      "stars": 5,
+      "count": 13
+    },
+    {
+      "stars": 4,
+      "count": 15
+    },
+    {
+      "stars": 3,
+      "count": 15
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "acessiories-shoes-2": [
+    {
+      "stars": 5,
+      "count": 24
+    },
+    {
+      "stars": 4,
+      "count": 5
+    },
+    {
+      "stars": 3,
+      "count": 3
+    },
+    {
+      "stars": 2,
+      "count": 5
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "acessiories-shoes-3": [
+    {
+      "stars": 5,
+      "count": 13
+    },
+    {
+      "stars": 4,
+      "count": 9
+    },
+    {
+      "stars": 3,
+      "count": 8
+    },
+    {
+      "stars": 2,
+      "count": 8
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "acessiories-shoes-4": [
+    {
+      "stars": 5,
+      "count": 30
+    },
+    {
+      "stars": 4,
+      "count": 6
+    },
+    {
+      "stars": 3,
+      "count": 8
+    },
+    {
+      "stars": 2,
+      "count": 6
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "acessiories-shoes-5": [
+    {
+      "stars": 5,
+      "count": 17
+    },
+    {
+      "stars": 4,
+      "count": 19
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 1
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-shoes-6": [
+    {
+      "stars": 5,
+      "count": 20
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 6
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "acessiories-shoes-7": [
+    {
+      "stars": 5,
+      "count": 22
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-shoes-8": [
+    {
+      "stars": 5,
+      "count": 18
+    },
+    {
+      "stars": 4,
+      "count": 17
+    },
+    {
+      "stars": 3,
+      "count": 13
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "acessiories-shoes-9": [
+    {
+      "stars": 5,
+      "count": 21
+    },
+    {
+      "stars": 4,
+      "count": 15
+    },
+    {
+      "stars": 3,
+      "count": 6
+    },
+    {
+      "stars": 2,
+      "count": 5
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "acessiories-shoes-10": [
+    {
+      "stars": 5,
+      "count": 17
+    },
+    {
+      "stars": 4,
+      "count": 5
+    },
+    {
+      "stars": 3,
+      "count": 6
+    },
+    {
+      "stars": 2,
+      "count": 6
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-watches-1": [
+    {
+      "stars": 5,
+      "count": 16
+    },
+    {
+      "stars": 4,
+      "count": 14
+    },
+    {
+      "stars": 3,
+      "count": 14
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "acessiories-watches-2": [
+    {
+      "stars": 5,
+      "count": 27
+    },
+    {
+      "stars": 4,
+      "count": 17
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 9
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "acessiories-watches-3": [
+    {
+      "stars": 5,
+      "count": 10
+    },
+    {
+      "stars": 4,
+      "count": 18
+    },
+    {
+      "stars": 3,
+      "count": 13
+    },
+    {
+      "stars": 2,
+      "count": 9
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-watches-4": [
+    {
+      "stars": 5,
+      "count": 25
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 14
+    },
+    {
+      "stars": 2,
+      "count": 8
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "acessiories-watches-5": [
+    {
+      "stars": 5,
+      "count": 16
+    },
+    {
+      "stars": 4,
+      "count": 9
+    },
+    {
+      "stars": 3,
+      "count": 8
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-watches-6": [
+    {
+      "stars": 5,
+      "count": 19
+    },
+    {
+      "stars": 4,
+      "count": 18
+    },
+    {
+      "stars": 3,
+      "count": 15
+    },
+    {
+      "stars": 2,
+      "count": 6
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "acessiories-watches-7": [
+    {
+      "stars": 5,
+      "count": 22
+    },
+    {
+      "stars": 4,
+      "count": 13
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "acessiories-watches-8": [
+    {
+      "stars": 5,
+      "count": 17
+    },
+    {
+      "stars": 4,
+      "count": 17
+    },
+    {
+      "stars": 3,
+      "count": 3
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-watches-9": [
+    {
+      "stars": 5,
+      "count": 25
+    },
+    {
+      "stars": 4,
+      "count": 11
+    },
+    {
+      "stars": 3,
+      "count": 11
+    },
+    {
+      "stars": 2,
+      "count": 1
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "acessiories-watches-10": [
+    {
+      "stars": 5,
+      "count": 18
+    },
+    {
+      "stars": 4,
+      "count": 9
+    },
+    {
+      "stars": 3,
+      "count": 9
+    },
+    {
+      "stars": 2,
+      "count": 8
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "acessiories-glasses-1": [
+    {
+      "stars": 5,
+      "count": 15
+    },
+    {
+      "stars": 4,
+      "count": 11
+    },
+    {
+      "stars": 3,
+      "count": 12
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "acessiories-glasses-2": [
+    {
+      "stars": 5,
+      "count": 10
+    },
+    {
+      "stars": 4,
+      "count": 11
+    },
+    {
+      "stars": 3,
+      "count": 4
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "acessiories-glasses-3": [
+    {
+      "stars": 5,
+      "count": 30
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 9
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "acessiories-glasses-4": [
+    {
+      "stars": 5,
+      "count": 26
+    },
+    {
+      "stars": 4,
+      "count": 15
+    },
+    {
+      "stars": 3,
+      "count": 4
+    },
+    {
+      "stars": 2,
+      "count": 9
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "acessiories-glasses-5": [
+    {
+      "stars": 5,
+      "count": 16
+    },
+    {
+      "stars": 4,
+      "count": 19
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 8
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "acessiories-glasses-6": [
+    {
+      "stars": 5,
+      "count": 19
+    },
+    {
+      "stars": 4,
+      "count": 20
+    },
+    {
+      "stars": 3,
+      "count": 8
+    },
+    {
+      "stars": 2,
+      "count": 5
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "acessiories-glasses-7": [
+    {
+      "stars": 5,
+      "count": 14
+    },
+    {
+      "stars": 4,
+      "count": 7
+    },
+    {
+      "stars": 3,
+      "count": 14
+    },
+    {
+      "stars": 2,
+      "count": 10
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "acessiories-glasses-8": [
+    {
+      "stars": 5,
+      "count": 11
+    },
+    {
+      "stars": 4,
+      "count": 18
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "acessiories-glasses-9": [
+    {
+      "stars": 5,
+      "count": 24
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 9
+    },
+    {
+      "stars": 2,
+      "count": 5
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "acessiories-glasses-10": [
+    {
+      "stars": 5,
+      "count": 20
+    },
+    {
+      "stars": 4,
+      "count": 20
+    },
+    {
+      "stars": 3,
+      "count": 11
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-caps-1": [
+    {
+      "stars": 5,
+      "count": 13
+    },
+    {
+      "stars": 4,
+      "count": 19
+    },
+    {
+      "stars": 3,
+      "count": 9
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "acessiories-caps-2": [
+    {
+      "stars": 5,
+      "count": 16
+    },
+    {
+      "stars": 4,
+      "count": 14
+    },
+    {
+      "stars": 3,
+      "count": 13
+    },
+    {
+      "stars": 2,
+      "count": 8
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "acessiories-caps-3": [
+    {
+      "stars": 5,
+      "count": 17
+    },
+    {
+      "stars": 4,
+      "count": 10
+    },
+    {
+      "stars": 3,
+      "count": 5
+    },
+    {
+      "stars": 2,
+      "count": 2
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "acessiories-caps-4": [
+    {
+      "stars": 5,
+      "count": 17
+    },
+    {
+      "stars": 4,
+      "count": 17
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 8
+    },
+    {
+      "stars": 1,
+      "count": 0
+    }
+  ],
+  "acessiories-caps-5": [
+    {
+      "stars": 5,
+      "count": 30
+    },
+    {
+      "stars": 4,
+      "count": 11
+    },
+    {
+      "stars": 3,
+      "count": 7
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "acessiories-caps-6": [
+    {
+      "stars": 5,
+      "count": 11
+    },
+    {
+      "stars": 4,
+      "count": 8
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 1
+    },
+    {
+      "stars": 1,
+      "count": 1
+    }
+  ],
+  "acessiories-caps-7": [
+    {
+      "stars": 5,
+      "count": 12
+    },
+    {
+      "stars": 4,
+      "count": 10
+    },
+    {
+      "stars": 3,
+      "count": 9
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "acessiories-caps-8": [
+    {
+      "stars": 5,
+      "count": 13
+    },
+    {
+      "stars": 4,
+      "count": 9
+    },
+    {
+      "stars": 3,
+      "count": 13
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "acessiories-caps-9": [
+    {
+      "stars": 5,
+      "count": 17
+    },
+    {
+      "stars": 4,
+      "count": 13
+    },
+    {
+      "stars": 3,
+      "count": 4
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ],
+  "acessiories-caps-10": [
+    {
+      "stars": 5,
+      "count": 27
+    },
+    {
+      "stars": 4,
+      "count": 9
+    },
+    {
+      "stars": 3,
+      "count": 14
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "acessiories-lipsticks-1": [
+    {
+      "stars": 5,
+      "count": 20
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 4
+    },
+    {
+      "stars": 2,
+      "count": 5
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "acessiories-lipsticks-2": [
+    {
+      "stars": 5,
+      "count": 11
+    },
+    {
+      "stars": 4,
+      "count": 9
+    },
+    {
+      "stars": 3,
+      "count": 10
+    },
+    {
+      "stars": 2,
+      "count": 1
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-lipsticks-3": [
+    {
+      "stars": 5,
+      "count": 11
+    },
+    {
+      "stars": 4,
+      "count": 7
+    },
+    {
+      "stars": 3,
+      "count": 4
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-lipsticks-4": [
+    {
+      "stars": 5,
+      "count": 18
+    },
+    {
+      "stars": 4,
+      "count": 16
+    },
+    {
+      "stars": 3,
+      "count": 4
+    },
+    {
+      "stars": 2,
+      "count": 4
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-lipsticks-5": [
+    {
+      "stars": 5,
+      "count": 22
+    },
+    {
+      "stars": 4,
+      "count": 6
+    },
+    {
+      "stars": 3,
+      "count": 6
+    },
+    {
+      "stars": 2,
+      "count": 7
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-lipsticks-6": [
+    {
+      "stars": 5,
+      "count": 21
+    },
+    {
+      "stars": 4,
+      "count": 15
+    },
+    {
+      "stars": 3,
+      "count": 5
+    },
+    {
+      "stars": 2,
+      "count": 1
+    },
+    {
+      "stars": 1,
+      "count": 2
+    }
+  ],
+  "acessiories-lipsticks-7": [
+    {
+      "stars": 5,
+      "count": 13
+    },
+    {
+      "stars": 4,
+      "count": 6
+    },
+    {
+      "stars": 3,
+      "count": 4
+    },
+    {
+      "stars": 2,
+      "count": 6
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "acessiories-lipsticks-8": [
+    {
+      "stars": 5,
+      "count": 17
+    },
+    {
+      "stars": 4,
+      "count": 17
+    },
+    {
+      "stars": 3,
+      "count": 5
+    },
+    {
+      "stars": 2,
+      "count": 3
+    },
+    {
+      "stars": 1,
+      "count": 3
+    }
+  ],
+  "acessiories-lipsticks-9": [
+    {
+      "stars": 5,
+      "count": 10
+    },
+    {
+      "stars": 4,
+      "count": 18
+    },
+    {
+      "stars": 3,
+      "count": 3
+    },
+    {
+      "stars": 2,
+      "count": 5
+    },
+    {
+      "stars": 1,
+      "count": 4
+    }
+  ],
+  "acessiories-lipsticks-10": [
+    {
+      "stars": 5,
+      "count": 20
+    },
+    {
+      "stars": 4,
+      "count": 7
+    },
+    {
+      "stars": 3,
+      "count": 15
+    },
+    {
+      "stars": 2,
+      "count": 2
+    },
+    {
+      "stars": 1,
+      "count": 5
+    }
+  ]
+}

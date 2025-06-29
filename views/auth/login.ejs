@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acess</title>
+   <link rel="icon" type="image/png" href="/image/Acess%20logo/logo.png?v=1.0" />
+  </head>
+  <body>
+<!-- stylesheets  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="/css/login.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+<!-- Navbar -->
+    <%- include('../../partials/navbar', { page: page }) %>
+<!-- Login form -->
+    <div class="card form-card shadow-lg mx-auto" style="max-width: 100%; width: 100%; max-width: 600px;">
+  <div class="card-body">
+    <h3 class="text-center">
+      <img src="../image/Acess logo/logo.png" alt="Acess Logo" style="width: 60px; height: 60px;" />
+    </h3>
+    <br />
+    <form class="row g-3 needs-validation" action="/login" novalidate method="POST">
+      <div class="row">
+        <!-- First Name -->
+        <div class="col-12 col-md-6 mb-2">
+          <label class="form-label">First Name</label>
+          <input name="firstname" type="text" class="form-control" required />
+          <div class="invalid-feedback">
+            First name must not be empty.
+          </div>
+        </div>
+
+        <!-- Last Name -->
+        <div class="col-12 col-md-6 mb-2">
+          <label class="form-label">Last Name</label>
+          <input name="lastname" type="text" class="form-control" required />
+          <div class="invalid-feedback">
+            Last name must not be empty.
+          </div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input name="email" type="email" class="form-control" id="inputEmail4" required />
+        <div class="invalid-feedback">
+          Please enter a valid email address.
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input name="Pass" type="password" class="form-control" id="inputPassword4" required />
+        <div class="invalid-feedback">
+          Password must not be empty.
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-dark mt-3" style="width: 160px">Log in</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- redirect link to register form  -->
+<div class="container text-center" style="font-size: 18px; margin-top: 30px;">
+  Not a member?
+  <a href="/signup" style="text-decoration: none; color: blue;">Register</a>
+</div>
+
+  </body>
+
+<!-- scripts -->
+
+ <script>
+  (function () {
+    "use strict";
+
+    const forms = document.querySelectorAll(".needs-validation");
+
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+        "submit",
+        function (event) {
+          let isCustomValid = true;
+
+          // Reset previous validation states
+          form.querySelectorAll(".is-invalid").forEach(el => el.classList.remove("is-invalid"));
+
+          // ✅ PASSWORD VALIDATION
+          const passwordInput = document.getElementById("inputPassword4");
+          const password = passwordInput.value;
+
+          // ✅ HTML5 + Custom Combined Validation
+          if (!form.checkValidity() || !isCustomValid) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
+  })();
+</script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+</html>

@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "name": "Dinosaur Printed T-Shirt",
+        "description": "White t-shirt with dinosaur prints, perfect for young adventurers.",
+        "price": 19.99,
+        "image": "../image/kids/kids1.jpg",
+        "style": "casual"
+    ,    "categories": "kids"},
+    {
+        "id": 2,
+        "name": "Sparkly Princess Dress",
+        "description": "Shimmery princess dress with glitter accents, ideal for dress-up and parties.",
+        "price": 29.99,
+        "image": "../image/kids/kids2.avif",
+        "style": "formal"
+    ,    "categories": "kids"},
+    {
+        "id": 3,
+        "name": "Blue dino bedsheet",
+        "description": "Transform bedtime into an adventure with our vibrant blue dinosaur-themed bedsheets for kids.",
+        "price": 39.99,
+        "image": "../image/kids/kids3.jpg",
+        "style": "traditional",    "categories": "kids"
+    },
+    {
+        "id": 4,
+        "name": "Light-Up Sneakers",
+        "description": "Sneakers with LED lights that blink with each step, making them fun and safe.",
+        "price": 34.99,
+        "image": "../image/kids/kids4.jpg",
+        "style": "casual"
+    ,    "categories": "kids"},
+    {
+        "id": 5,
+        "name": "Kids Metal Frame Sunglasses",
+        "description": "Trendy kids' metal frame sunglasses offering style and UV protection.",
+        "price": 24.99,
+        "image": "../image/kids/kids5.jpg",
+        "style": "vintage"
+   ,    "categories": "kids" },
+    {
+        "id": 6,
+        "name": "Superhero Cape and Mask Set",
+        "description": "Set of superhero cape and mask for imaginative play and costume parties.",
+        "price": 19.99,
+        "image": "../image/kids/kids6.jpg",
+        "style": "costume"
+    ,    "categories": "kids"},
+    {
+        "id": 7,
+        "name": "Blue Wool Sailor Jacket",
+        "description": "Stylish blue wool sailor jacket perfect for keeping kids warm and fashionable.",
+        "price": 29.99,
+        "image": "../image/kids/kids7.jpg",
+        "style": "vintage"
+   ,    "categories": "kids" },
+    {
+        "id": 8,
+        "name": "Animal Onesie Pajamas",
+        "description": "Soft and cozy animal-themed onesie pajamas for comfortable sleep.",
+        "price": 27.99,
+        "image": "../image/kids/kids8.jpg",
+        "style": "traditional",    "categories": "kids"
+    },
+    {
+        "id": 9,
+        "name": "Kids Leather Boots",
+        "description": "Durable kids leather boots with a comfortable fit for everyday adventures.",
+        "price": 19.99,
+        "image": "../image/kids/kids9.jpg",
+        "style": "casual"
+    ,    "categories": "kids"},
+    {
+        "id": 10,
+        "name": "Pink Bunny Slippers",
+        "description": "Cozy pink bunny slippers perfect for keeping little feet warm.",
+        "price": 49.99,
+        "image": "../image/kids/kids10.jpg",
+        "style": "traditional",    "categories": "kids"
+    },
+    {
+        "id": 11,
+        "name": "Mermaid Tail Blanket",
+        "description": "Soft and cozy mermaid tail blanket for lounging and nap time.",
+        "price": 21.99,
+        "image": "../image/kids/kids11.jpg",
+        "style": "vintage"
+   ,    "categories": "kids" },
+    {
+        "id": 12,
+        "name": "Sports Jersey (Various Sports)",
+        "description": "Authentic sports jersey for young sports enthusiasts, available in different sports themes.",
+        "price": 39.99,
+        "image": "../image/kids/kids12.jpg",
+        "style": "casual"
+    ,    "categories": "kids"},
+    {
+        "id": 14,
+        "name": "Rainbow Tutu Skirt",
+        "description": "Colorful rainbow tutu skirt for magical playtime and dance performances.",
+        "price": 15.99,
+        "image": "../image/kids/kids13.jpg",
+        "style": "formal"
+    ,    "categories": "kids"},
+    {
+        "id": 17,
+        "name": "Kids Tuxedo",
+        "description": "Make your little one look dapper with our kids' tuxedo, perfect for formal occasions and special events.",
+        "price": 49.99,
+        "image": "../image/kids/kids14.jpg",
+        "style": "formal"
+    ,    "categories": "kids"},
+    {
+        "id": 18,
+        "name": "Fairy Wings and Wand",
+        "description": "Enchanting fairy wings and wand set for imaginative play and costume parties.",
+        "price": 17.99,
+        "image": "../image/kids/kids15.jpg",
+        "style": "costume"
+   ,    "categories": "kids" },
+    {
+        "id": 19,
+        "name": "Kids Frock Baby Girl Dress",
+        "description": "A charming kids frock for baby girls, perfect for parties and special occasions.",
+        "price": 59.99,
+        "image": "../image/kids/kids16.jpg",
+        "style": "traditional",    "categories": "kids"
+    },
+    {
+        "id": 21,
+        "name": "Toddler Summer Outfit",
+        "description": "A cute and comfortable summer outfit for toddlers, ideal for sunny days.",
+        "price": 12.99,
+        "image": "../image/kids/kids17.jpg",
+        "style": "casual"
+    ,    "categories": "kids"},
+    {
+        "id": 22,
+        "name": "Ballet Dance Outfit",
+        "description": "Elegant ballet dance outfit including leotard and tutu for aspiring ballerinas.",
+        "price": 34.99,
+        "image": "../image/kids/kids18.jpg",
+        "style": "formal"
+    ,    "categories": "kids"},
+    {
+        "id": 23,
+        "name": "Young Girl Contrast Binding Peter Pan Collar Dress",
+        "description": "A charming young girl's dress with a contrast binding and a Peter Pan collar.",
+        "price": 19.99,
+        "image": "../image/kids/kids19.jpg",
+        "style": "traditional",    "categories": "kids"
+    },
+    {
+        "id": 24,
+        "name": "Space-themed Bedding Set",
+        "description": "Comfortable space-themed bedding set for dreamy nights of sleep.",
+        "price": 29.99,
+        "image": "../image/kids/kids20.jpg",
+        "style": "casual"
+    ,    "categories": "kids"}
+]

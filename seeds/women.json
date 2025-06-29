@@ -1,0 +1,218 @@
+[
+    {
+      "id": 1,
+      "name": "Pink sneakers",
+      "description": "Comfortable sneakers with breathable mesh and cushioned soles.",
+      "price": 89.99,
+      "image": "../image/women/women1.jpg",
+      "categories": "women",
+      "style": "casual"
+    },
+    {
+      "id": 2,
+      "name": "High Heels",
+      "description": "Elegant high heels with a sleek design and comfortable fit.",
+      "price": 79.99,
+      "image": "../image/women/women2.avif",
+      "categories": "women",
+      "style": "formal"
+    },
+    {
+      "id": 3,
+      "name": "Summer Dress",
+      "description": "Lightweight summer dress with floral print and adjustable straps.",
+      "price": 59.99,
+      "image": "../image/women/women3.jpg",
+      "categories": "women",
+      "style": "casual"
+    },
+    {
+      "id": 4,
+      "name": "Evening Gown",
+      "description": "Stunning evening gown with sequins and a flowing silhouette.",
+      "price": 149.99,
+      "image": "../image/women/women4.jpg",
+      "categories": "women",
+      "style": "formal"
+    },
+    {
+      "id": 5,
+      "name": "Leather Jacket",
+      "description": "Classic leather jacket with zippered pockets and quilted lining.",
+      "price": 129.99,
+      "image": "../image/women/women5.jpg",
+      "categories": "women",
+      "style": "casual"
+    },
+    {
+      "id": 6,
+      "name": "Boho Chic Blouse",
+      "description": "Bohemian-style blouse with intricate embroidery and tassel ties.",
+      "price": 69.99,
+      "image": "../image/women/women6.avif",
+      "categories": "women",
+      "style": "bohemian"
+    },
+    {
+      "id": 7,
+      "name": "Denim Jeans",
+      "description": "Slim-fit denim jeans with distressed detailing.",
+      "price": 79.99,
+      "image": "../image/women/women7.jpg",
+      "categories": "women",
+      "style": "casual"
+    },
+    {
+      "id": 8,
+      "name": "Maxi Skirt",
+      "description": "Flowy maxi skirt with a comfortable elastic waistband.",
+      "price": 49.99,
+      "image": "../image/women/women8.jpg",
+      "categories": "women",
+      "style": "casual"
+    },
+    {
+      "id": 9,
+      "name": "Ankle Boots",
+      "description": "Stylish ankle boots with stacked heels and side zipper.",
+      "price": 109.99,
+      "image": "../image/women/women9.avif",
+      "categories": "women",
+      "style": "casual"
+    },
+    {
+      "id": 10,
+      "name": "Diamond Necklace",
+      "description": "Exquisite diamond necklace with a sparkling pendant.",
+      "price": 299.99,
+      "image": "../image/women/women10.avif",
+      "categories": "women",
+      "style": "formal"
+    },
+    {
+      "id": 11,
+      "name": "Gold Bracelet",
+      "description": "Elegant gold bracelet with intricate filigree work.",
+      "price": 199.99,
+      "image": "../image/women/women11.avif",
+      "categories": "women",
+      "style": "formal"
+    },
+    {
+      "id": 12,
+      "name": "Pearl Earrings",
+      "description": "Classic pearl earrings with sterling silver posts.",
+      "price": 89.99,
+      "image": "../image/women/women12.avif",
+      "categories": "women",
+      "style": "formal"
+    },
+    {
+      "id": 13,
+      "name": "Sun Hat",
+      "description": "Wide-brimmed sun hat with UPF 50+ protection.",
+      "price": 39.99,
+      "image": "../image/women/women13.avif",
+      "categories": "women",
+      "style": "casual"
+    },
+    {
+      "id": 14,
+      "name": "Silk Scarf",
+      "description": "Luxurious silk scarf with a vibrant floral print.",
+      "price": 49.99,
+      "image": "../image/women/women14.avif",
+      "categories": "women",
+      "style": "formal"
+    },
+    {
+      "id": 15,
+      "name": "Black sari",
+      "description": "A timeless black Indian sari, elegantly woven with intricate patterns, perfect for special occasions.",
+      "price": 69.99,
+      "image": "../image/women/women15.jpg",
+      "categories": "women",
+      "style": "traditional"
+    },
+    {
+      "id": 16,
+      "name": "Wedding Dress",
+      "description": "Exquisite wedding dress with lace detailing and a flowing train.",
+      "price": 999.99,
+      "image": "../image/women/women16.avif",
+      "categories": "women",
+      "style": "formal"
+    },
+    {
+      "id": 17,
+      "name": "Retro Sunglasses",
+      "description": "Vintage-inspired sunglasses with UV protection.",
+      "price": 29.99,
+      "image": "../image/women/women17.avif",
+      "categories": "women",
+      "style": "vintage"
+    },
+    {
+      "id": 18,
+      "name": "Leather Handbag",
+      "description": "Stylish leather handbag with multiple compartments.",
+      "price": 149.99,
+      "image": "../image/women/women18.avif",
+      "categories": "women",
+      "style": "casual"
+    },
+    {
+      "id": 19,
+      "name": "Casual Sneakers",
+      "description": "Comfortable casual sneakers with a sporty design.",
+      "price": 79.99,
+      "image": "../image/women/women19.avif",
+      "categories": "women",
+      "style": "casual"
+    },
+    {
+      "id": 20,
+      "name": "Traditional blue kurta",
+      "description": "A classic blue kurta, tailored in traditional style with intricate detailing, ideal for cultural gatherings.",
+      "price": 59.99,
+      "image": "../image/women/women20.jpg",
+      "categories": "women",
+      "style": "traditional"
+    },
+    {
+      "id": 21,
+      "name": "Cashmere Sweater",
+      "description": "Luxurious cashmere sweater with ribbed cuffs and hem.",
+      "price": 129.99,
+      "image": "../image/women/women21.jpg",
+      "categories": "women",
+      "style": "formal"
+    },
+    {
+      "id": 22,
+      "name": "Winter Coat",
+      "description": "Warm winter coat with faux fur trim and quilted lining.",
+      "price": 199.99,
+      "image": "../image/women/women22.avif",
+      "categories": "women",
+      "style": "casual"
+    },
+    {
+      "id": 23,
+      "name": "Gold Necklace",
+      "description": "Bold statement necklace with colorful gemstones.",
+      "price": 149.99,
+      "image": "../image/women/women23.avif",
+      "categories": "women",
+      "style": "formal"
+    },
+    {
+      "id": 24,
+      "name": "Fashion Watch",
+      "description": "Stylish fashion watch with a sleek stainless steel design.",
+      "price": 99.99,
+      "image": "../image/women/women24.avif",
+      "categories": "women",
+      "style": "casual"
+    }
+]

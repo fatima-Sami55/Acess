@@ -1,0 +1,218 @@
+[
+    {
+      "id": 15,
+      "name": "Denim Shirt",
+      "description": "A stylish denim shirt for a casual look.",
+      "price": 69.99,
+      "image": "../image/men/men15.jpg",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 11,
+      "name": "Linen Blazer",
+      "description": "A light and breathable linen blazer for summer.",
+      "price": 189.99,
+      "image": "../image/men/men11.avif",
+      "categories": "men",
+      "style": "formal"
+    },
+    {
+      "id": 9,
+      "name": "Casual Blazer",
+      "description": "A casual blazer suitable for both office and casual outings.",
+      "price": 179.99,
+      "image": "../image/men/men9.jpg",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 22,
+      "name": "Cargo Pants",
+      "description": "Functional cargo pants with multiple pockets.",
+      "price": 69.99,
+      "image": "../image/men/men22.jpg",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 10,
+      "name": "Wool Blazer",
+      "description": "A warm wool blazer ideal for colder weather.",
+      "price": 249.99,
+      "image": "../image/men/men10.jpg",
+      "categories": "men",
+      "style": "formal"
+    },
+    {
+      "id": 24,
+      "name": "Shorts",
+      "description": "Casual shorts perfect for warm weather.",
+      "price": 29.99,
+      "image": "../image/men/men24.jpg",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 16,
+      "name": "Flannel Shirt",
+      "description": "A warm flannel shirt perfect for colder days.",
+      "price": 39.99,
+      "image": "../image/men/men16.avif",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 19,
+      "name": "Jeans",
+      "description": "Classic blue jeans with a comfortable fit.",
+      "price": 59.99,
+      "image": "../image/men/men19.avif",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 21,
+      "name": "Dress Pants",
+      "description": "Elegant dress pants suitable for formal occasions.",
+      "price": 79.99,
+      "image": "../image/men/men21.jpg",
+      "categories": "men",
+      "style": "formal"
+    },
+    {
+      "id": 18,
+      "name": "Hawaiian Shirt",
+      "description": "A colorful Hawaiian shirt perfect for vacations.",
+      "price": 29.99,
+      "image": "../image/men/men18.jpg",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 14,
+      "name": "Formal Shirt",
+      "description": "A formal shirt ideal for office and formal events.",
+      "price": 59.99,
+      "image": "../image/men/men14.jpg",
+      "categories": "men",
+      "style": "formal"
+    },
+    {
+      "id": 17,
+      "name": "Linen Shirt",
+      "description": "A light and breathable linen shirt for summer.",
+      "price": 49.99,
+      "image": "../image/men/men17.avif",
+      "categories": "men",
+      "style": "formal"
+    },
+    {
+      "id": 23,
+      "name": "Joggers",
+      "description": "Comfortable joggers for athletic and casual wear.",
+      "price": 39.99,
+      "image": "../image/men/men23.avif",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 20,
+      "name": "Chinos",
+      "description": "Versatile chinos perfect for both casual and formal wear.",
+      "price": 49.99,
+      "image": "../image/men/men20.png",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 13,
+      "name": "Casual Shirt",
+      "description": "A comfortable casual shirt perfect for everyday wear.",
+      "price": 49.99,
+      "image": "../image/men/men13.avif",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 12,
+      "name": "Classic Black Tuxedo",
+      "description": "Elevate your formal attire with our classic black tuxedo, tailored for impeccable fit.",
+      "price": 219.99,
+      "image": "../image/men/men12.jpg",
+      "categories": "men",
+      "style": "formal"
+    },
+    {
+      "id": 8,
+      "name": "Modern Blazer",
+      "description": "A modern blazer with a slim fit design.",
+      "price": 209.99,
+      "image": "../image/men/men8.avif",
+      "categories": "men",
+      "style": "formal"
+    },
+    {
+      "id": 7,
+      "name": "Classic Blazer",
+      "description": "A classic blazer perfect for formal occasions.",
+      "price": 199.99,
+      "image": "../image/men/men7.avif",
+      "categories": "men",
+      "style": "formal"
+    },
+    {
+      "id": 6,
+      "name": "Formal Shoes",
+      "description": "Elegant formal shoes made with high-quality leather.",
+      "price": 129.99,
+      "image": "../image/men/men6.jpg",
+      "categories": "men",
+      "style": "formal"
+    },
+    {
+      "id": 5,
+      "name": "Casual Sneakers",
+      "description": "Stylish casual sneakers with a classic design and comfortable fit.",
+      "price": 69.99,
+      "image": "../image/men/men5.avif",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 4,
+      "name": "Tennis Shoes",
+      "description": "Lightweight tennis shoes with excellent grip and stability.",
+      "price": 99.99,
+      "image": "../image/men/men4.jpg",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 3,
+      "name": "Basketball Shoes",
+      "description": "High-top basketball shoes with ankle support and responsive cushioning.",
+      "price": 109.99,
+      "image": "../image/men/men3.avif",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 2,
+      "name": "Walking Shoes",
+      "description": "Durable walking shoes with arch support and slip-resistant soles.",
+      "price": 79.99,
+      "image": "../image/men/men2.avif",
+      "categories": "men",
+      "style": "casual"
+    },
+    {
+      "id": 1,
+      "name": "Running Shoes",
+      "description": "Comfortable running shoes with breathable mesh and cushioned soles.",
+      "price": 89.99,
+      "image": "../image/men/men1.avif",
+      "categories": "men",
+      "style": "casual"
+    }
+]

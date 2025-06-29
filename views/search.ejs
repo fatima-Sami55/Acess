@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acess</title>
+    <link rel="icon" type="image/png" href="/image/Acess%20logo/logo.png?v=1.0" />
+  </head>
+  <body>
+<!-- stylesheets -->
+    <link href="/css/search.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+<!-- Navbar -->
+    <%- include('../partials/navbar', { page: page }) %>
+<!-- Serach result + filter section -->
+<% 
+const search = []; 
+searchResults.forEach(product => { 
+search.push({ 
+      id: JSON.stringify(product.id), 
+      name: product.name,
+      description: product.description, 
+      image: product.image, 
+      price: JSON.stringify(product.price), 
+      categories: product.categories, 
+      style: product.style 
+  }); 
+}); 
+%> 
+ <!-- Hidden div to store search data for JS filtering -->
+ <div id="search-data" data-search='<%- JSON.stringify(searchResults) %>' style="display:none;"></div>
+ <!-- Serach result + filter section Wrapper -->
+ <div class="search" style="padding-top: 100px;">
+  <div>
+    <!-- Main Content Section -->
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="sort-header-section flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
+        <h1 class="Result-header text-4xl font-bold tracking-tight text-gray-900">
+          Results for : <%=query%>
+        </h1>
+        <div class="flex items-center">
+          <div class="relative inline-block text-left">
+            <form action="/search" method="GET" class="flex items-center">
+              <!-- Retain search query -->
+              <input type="hidden" name="search" value="<%= query %>">
+              <!-- Sort Label/Button (Just for visual grouping, not functional dropdown) -->
+              <label for="sort" class="mr-2 text-sm font-medium text-gray-700">Sort</label>
+              <br>
+              <!-- Proper select element -->
+              <select
+                id="sort"
+                name="sort"
+                onchange="this.form.submit()"
+                class="ml-3 text-sm font-medium text-gray-700 hover:text-gray-900 bg-white border border-gray-300 rounded-md pl-3 pr-8 py-1 focus:outline-none appearance-none"
+              >
+                <option value="default" <% if (sort === 'default') { %>selected<% } %>>Default</option>
+                <option value="price-low-high" <% if (sort === 'price-low-high') { %>selected<% } %>>Price: Low to High</option>
+                <option value="price-high-low" <% if (sort === 'price-high-low') { %>selected<% } %>>Price: High to Low</option>
+              </select>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products and Filters Section -->
+      <section aria-labelledby="products-heading" class="pb-24 pt-6">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+          <!-- Filters Sidebar (Desktop) -->
+          <form class="lg:col-span-1 fixed-sidebar border-r border-gray-200 px-4">
+            <h4 style="text-align: left; padding-bottom: 25px">Filters</h4>
+            <!-- Categories Filter Section -->
+            <div class="border-b border-gray-200 py-6">
+              <h3 class="-my-3 flow-root">
+                <button
+                  type="button"
+                  class="flex w-full items-center justify-between py-3 text-sm text-gray-400 hover:text-gray-500 toggle-button"
+                  aria-controls="filter-section-categories-desktop"
+                  aria-expanded="false"
+                >
+                  <span class="font-medium text-gray-900">Categories</span>
+                  <span class="ml-6 flex items-center">
+                    <svg
+                      class="expand-icon h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
+                      />
+                    </svg>
+                    <svg
+                      class="collapse-icon hidden h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <div
+                class="filter-section pt-6 hidden"
+                id="filter-section-categories-desktop"
+              >
+                <div class="space-y-4">
+                  <div class="flex items-center">
+                    <input
+                      id="filter-category-men-desktop"
+                      name="category"
+                      value="men"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-category-men-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Men</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-category-women-desktop"
+                      name="category"
+                      value="women"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-category-women-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Women</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-category-kids-desktop"
+                      name="category"
+                      value="kids"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-category-kids-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Kids</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-category-accessories-desktop"
+                      name="category"
+                      value="acessiories"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-category-accessories-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Accessories</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Style Filter Section -->
+            <div class="border-b border-gray-200 py-6">
+              <h3 class="-my-3 flow-root">
+                <button
+                  type="button"
+                  class="flex w-full items-center justify-between py-3 text-sm text-gray-400 hover:text-gray-500 toggle-button"
+                  aria-controls="filter-section-styles-desktop"
+                  aria-expanded="false"
+                >
+                  <span class="font-medium text-gray-900">Styles</span>
+                  <span class="ml-6 flex items-center">
+                    <svg
+                      class="expand-icon h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
+                      />
+                    </svg>
+                    <svg
+                      class="collapse-icon hidden h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <div
+                class="filter-section pt-6 hidden"
+                id="filter-section-styles-desktop"
+              >
+                <div class="grid grid-cols-3 gap-4">
+                  <div class="flex items-center">
+                    <input
+                      id="filter-style-casual-desktop"
+                      name="style[]"
+                      value="casual"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-style-casual-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Casual</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-style-formal-desktop"
+                      name="style[]"
+                      value="formal"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-style-formal-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Formal</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-style-vintage-desktop"
+                      name="style[]"
+                      value="vintage"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-style-vintage-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Vintage</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-style-traditional-desktop"
+                      name="style[]"
+                      value="traditional"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-style-traditional-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Traditional</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-style-costume-desktop"
+                      name="style[]"
+                      value="costume"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-style-costume-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Costume</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-style-outdoor-desktop"
+                      name="style[]"
+                      value="outdoor"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-style-outdoor-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Outdoor</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-style-sporty-desktop"
+                      name="style[]"
+                      value="sporty"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-style-sporty-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Sporty</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Price Range Filter Section -->
+            <div class="py-6">
+              <h3 class="-my-3 flow-root">
+                <button
+                  type="button"
+                  class="flex w-full items-center justify-between py-3 text-sm text-gray-400 hover:text-gray-500 toggle-button"
+                  aria-controls="filter-section-price-desktop"
+                  aria-expanded="false"
+                >
+                  <span class="font-medium text-gray-900">Price Range</span>
+                  <span class="ml-6 flex items-center">
+                    <svg
+                      class="expand-icon h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
+                      />
+                    </svg>
+                    <svg
+                      class="collapse-icon hidden h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <div
+                class="filter-section pt-6 hidden"
+                id="filter-section-price-desktop"
+              >
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="flex items-center">
+                    <input
+                      id="filter-price-under50-desktop"
+                      name="price"
+                      value="under50"
+                      type="radio"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-price-under50-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Under $50</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-price-50to100-desktop"
+                      name="price"
+                      value="50to100"
+                      type="radio"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-price-50to100-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >$50 - $100</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-price-100to200-desktop"
+                      name="price"
+                      value="100to200"
+                      type="radio"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-price-100to200-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >$100 - $200</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      id="filter-price-over200-desktop"
+                      name="price"
+                      value="over200"
+                      type="radio"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      onclick="filterProducts()"
+                    />
+                    <label
+                      for="filter-price-over200-desktop"
+                      class="ml-3 text-sm text-gray-600"
+                      >Over $200</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <!-- Products Display Section -->
+          <% if (searchResults.length > 0) { %>
+          <div class="lg:col-span-3">
+            <div class="container mt-4" id="p-card">
+              <div id="products-container" class="row row-cols-1 row-cols-md-3 g-4">
+                <% searchResults.forEach(product => { %>
+                <div class="col" data-category="<%= product.categories %>">
+                  <div
+                    class="card product-card h-100"
+                    data-product-id="<%= product.id %>"
+                    data-price="<%= product.price %>" 
+                    data-rating="<%= product.rating || 0 %>"
+                  >
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                      <img
+                        class="product-thumb card-img-top"
+                        src="<%= product.image %>"
+                        alt="<%= product.name %>"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.15);"
+                        ></div>
+                      </a>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title font-weight-bold product-brand">
+                        <a><%= product.name %></a>
+                      </h5>
+                      <ul class="list-unstyled list-inline mb-2">
+                        <li class="list-inline-item">
+                          <strong class="price text-success"
+                            >$<%= product.price %></strong
+                          >
+                        </li>
+                      </ul>
+                      <p class="card-text product-short-description">
+                        <%= product.description %>
+                      </p>
+                      <div class="mt-auto">
+                        <a href="#" class="btn btn-dark card-btn text-white"
+                          >View product</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <% }) %>
+              </div>
+            </div>
+          </div>
+          <% } else { %>
+          <div class="lg:col-span-1 text-center">
+            <h1 class="font-bold" style="font-size: 30px">
+              No result found 😞
+            </h1>
+          </div>
+          <% } %>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+  </body>
+
+ <!-- scripts -->
+
+  <script>
+  function filterProducts() {
+    // Get checked checkboxes for categories and styles
+    const checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    const selectedCategories = Array.from(checkedBoxes)
+      .filter((checkbox) => checkbox.name === "category")
+      .map((checkbox) => checkbox.value);
+    const selectedStyles = Array.from(checkedBoxes)
+      .filter((checkbox) => checkbox.name === "style[]")
+      .map((checkbox) => checkbox.value);
+
+    // Get selected radio for price
+    const selectedPriceInput = document.querySelector('input[name="price"]:checked');
+    const selectedPrice = selectedPriceInput ? selectedPriceInput.value : null;
+
+    // Get search data from hidden div
+    const searchDataDiv = document.getElementById("search-data");
+    if (!searchDataDiv) {
+      console.error("Search data not found in DOM.");
+      return;
+    }
+    const searchDataString = searchDataDiv.getAttribute("data-search");
+    let searchData;
+    try {
+      searchData = JSON.parse(searchDataString);
+    } catch (e) {
+      console.error("Failed to parse search data:", e);
+      return;
+    }
+
+    // Filter products
+    const filteredProducts = searchData.filter((product) => {
+      const matchesCategory =
+        selectedCategories.length === 0 ||
+        selectedCategories.some((category) => product.categories === category);
+
+      const matchesStyle =
+        selectedStyles.length === 0 ||
+        selectedStyles.some((style) => product.style === style);
+
+      let matchesPrice = true;
+      if (selectedPrice) {
+        const price = parseFloat(product.price);
+        if (selectedPrice === "under50") matchesPrice = price < 50;
+        else if (selectedPrice === "50to100") matchesPrice = price >= 50 && price <= 100;
+        else if (selectedPrice === "100to200") matchesPrice = price > 100 && price <= 200;
+        else if (selectedPrice === "over200") matchesPrice = price > 200;
+      }
+
+      return matchesCategory && matchesStyle && matchesPrice;
+    });
+
+    const productsContainer = document.querySelector("#p-card");
+    // Clean the container and insert one proper row
+    productsContainer.innerHTML = '<div class="row row-cols-1 row-cols-md-3 g-4" id="product-row"></div>';
+
+    const productRow = document.getElementById("product-row");
+
+    if (filteredProducts.length === 0) {
+      productRow.innerHTML = `<div class="col-12 text-center"><h1 class="font-bold" style="font-size: 30px">No result found 😞</h1></div>`;
+      return;
+    }
+
+    filteredProducts.forEach((product) => {
+      const productHTML = `
+        <div class="col mb-4" data-category="${product.categories}">
+          <div class="card product-card h-100" data-product-id="${product.id}" data-rating="${product.rating || 0}">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img class="product-thumb card-img-top" src="${product.image}" alt="${product.name}" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title font-weight-bold product-brand">
+                <a>${product.name}</a>
+              </h5>
+              <ul class="list-unstyled list-inline mb-2">
+                <li class="list-inline-item">
+                  <strong class="price text-success" data-price="${product.price}">$${product.price}</strong>
+                </li>
+              </ul>
+              <p class="card-text product-short-description">${product.description}</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-dark card-btn text-white">View product</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      productRow.insertAdjacentHTML("beforeend", productHTML);
+    });
+  }
+ </script>
+
+<script>
+  document.querySelectorAll(".card-btn").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      // Find the parent product card
+      const productCard = event.target.closest(".product-card");
+
+      if (!productCard) {
+        alert("Product card not found");
+        return;
+      }
+
+      // Extract data from the specific product card
+      const itemName = productCard
+        .querySelector(".product-brand")
+        .innerText.trim();
+      const itemImage = productCard.querySelector(".product-thumb").src;
+      const itemDescription = productCard
+        .querySelector(".product-short-description")
+        .innerText.trim();
+      const itemPrice = productCard
+        .querySelector(".price")
+        .innerText.replace("$", "")
+        .trim();
+
+      // Construct URL with encoded query parameters
+      const url = new URL("/Product", window.location.origin);
+      url.searchParams.set("name", encodeURIComponent(itemName));
+      url.searchParams.set("img", encodeURIComponent(itemImage));
+      url.searchParams.set("desc", encodeURIComponent(itemDescription));
+      url.searchParams.set("price", encodeURIComponent(itemPrice));
+
+      window.location.href = url.toString();
+    });
+  });
+</script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButtons = document.querySelectorAll(".toggle-button");
+
+      toggleButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const sectionId = button.getAttribute("aria-controls");
+          const section = document.getElementById(sectionId);
+          const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+          // Close all filter sections
+          document
+            .querySelectorAll(".filter-section")
+            .forEach((filterSection) => {
+              if (filterSection !== section) {
+                filterSection.classList.add("hidden");
+              }
+            });
+
+          // Reset all toggle buttons
+          toggleButtons.forEach((btn) => {
+            if (btn !== button) {
+              btn.setAttribute("aria-expanded", "false");
+              btn.querySelector(".expand-icon").classList.remove("hidden");
+              btn.querySelector(".collapse-icon").classList.add("hidden");
+            }
+          });
+
+          // Toggle the clicked filter section
+          section.classList.toggle("hidden", isExpanded);
+          button.setAttribute("aria-expanded", !isExpanded);
+          button
+            .querySelector(".expand-icon")
+            .classList.toggle("hidden", !isExpanded);
+          button
+            .querySelector(".collapse-icon")
+            .classList.toggle("hidden", isExpanded);
+        });
+      });
+    });
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    src="https://kit.fontawesome.com/542d90fccf.js"
+    crossorigin="anonymous"
+  ></script>
+
+</html>

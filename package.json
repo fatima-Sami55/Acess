@@ -1,0 +1,38 @@
+{
+  "name": "world-in-palm",
+  "version": "1.0.0",
+  "description": "An E-commerce WebApp",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fatima",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "connect-flash": "^0.1.1",
+    "connect-mssql-v2": "^6.0.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.6",
+    "email-verifier": "^0.4.1",
+    "express": "^4.17.3",
+    "express-mysql-session": "^2.1.8",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "mssql": "^11.0.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^7.0.3",
+    "nodemon": "^3.1.10",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.7.5",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}

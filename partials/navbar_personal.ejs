@@ -1,0 +1,186 @@
+<style>
+  header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: white;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .logo {
+  font-family: "Dancing Script", cursive;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  color: #111;
+}
+
+#chk1 {
+  display: none;
+}
+
+header .menu {
+  font-size: 2.5rem;
+  display: none;
+  color: #111;
+  cursor: pointer;
+}
+
+header ul {
+  display: flex;
+  flex: 2;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+header a,
+header a:visited,
+header a:hover,
+header a:active,
+header a:focus {
+  color: black !important;
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  border-bottom: 2px solid #111;
+  color: black;
+}
+
+@media (max-width: 1000px) {
+  header .menu {
+    display: block;
+  }
+
+ header ul {
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    width: 60%;
+    height: calc(100vh - 100px);
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 30px;
+    gap: 100px;
+    transition: right 0.4s ease-in-out;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.05);
+  }
+
+  #chk1:checked ~ ul {
+    right: 0;
+  }
+}
+
+</style>
+
+<% if (success.length > 0 ) {%>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <%= success %>
+  <alert
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></alert>
+</div>
+<% } %>
+
+<% if (error.length > 0 ) {%>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%= error %>
+  <alert
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></alert>
+</div>
+<% } %>
+
+<header id="navbar" class="nav-after">
+  <!-- Hidden checkbox to control menu toggle -->
+  <input type="checkbox" id="chk1">
+
+  <!-- Logo -->
+  <div class="logo">
+    <h3>
+      <a
+        href="/home"
+        class="flex items-center space-x-3 rtl:space-x-reverse"
+        style="text-decoration: none; color: black"
+      >
+        <img
+          src="../image/Acess logo/logo.png"
+          class="h-8"
+          alt="Acess Logo"
+          style="width: 60px; height: 60px"
+        />
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >Acess</span
+        >
+      </a>
+    </h3>
+  </div>
+  <!-- Hamburger Icon -->
+  <label for="chk1" class="menu">
+    <i class="fa fa-bars"></i>
+  </label>
+
+  <!-- Navigation Links -->
+  <ul>
+    <% if (page === 'inbox') { %>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/orders">Orders</a></li>
+    <li><a href="/email">Email</a></li>
+    <li><a href="/review">Reviews</a></li>
+    <% } else if (page === 'orders') { %>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/inbox">Inbox</a></li>
+    <li><a href="/email">Email</a></li>
+    <li><a href="/review">Reviews</a></li>
+    <% } else if (page === 'email') { %>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/inbox">Inbox</a></li>
+    <li><a href="/orders">Orders</a></li>
+    <li><a href="/review">Reviews</a></li>
+    <% } else if (page === 'Reviews') { %>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/inbox">Inbox</a></li>
+    <li><a href="/orders">Orders</a></li>
+    <li><a href="/email">Email</a></li>
+    <% } else if (page === 'track') { %>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/acessiories">Accessories</a></li>
+    <li><a href="/orders">Back</a></li>
+    <% } else if (page === 'shop') { %>
+    <li><a href="/home">Home</a></li>
+    <li><a href="#" class="nav-link category-link" data-category="men">Men</a></li>
+    <li><a href="#" class="nav-link category-link" data-category="women">Women</a></li>
+    <li><a href="#" class="nav-link category-link" data-category="kids">Kids</a></li>
+    <% } %>
+  </ul>
+</header>
+

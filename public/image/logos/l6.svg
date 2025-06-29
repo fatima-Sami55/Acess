@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<svg
+   width="197.42575mm"
+   height="197.42575mm"
+   viewBox="0 0 197.42575 197.42575"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Wolność i Równość.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.76791526"
+     inkscape:cx="471.40618"
+     inkscape:cy="380.9014"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="158.8717"
+       y="234.40086"
+       width="408.89928"
+       height="311.23226"
+       id="rect21282" />
+  </defs>
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-37.211136,-47.892105)">
+    <circle
+       style="fill:#fecc2f;stroke-width:0.264583"
+       id="path848"
+       cx="135.92401"
+       cy="146.60498"
+       r="98.712875" />
+    <g
+       aria-label="wı̣r"
+       transform="matrix(0.3926302,0,0,0.39352697,17.946767,7.710086)"
+       id="text21280"
+       style="font-size:40px;line-height:1.25;white-space:pre;shape-inside:url(#rect21282)">
+      <path
+         d="m 217.23909,402.40039 h -27.648 l -30.72,-96 h 36.288 l 10.944,42.432 h 0.384 l 13.44,-42.432 h 20.352 l 12.864,42.816 h 0.384 l 10.752,-42.816 h 36.672 l -31.104,96 h -27.648 l -12.288,-34.176 h -0.384 z"
+         style="font-size:192px;font-family:'Kommon Grotesk';-inkscape-font-specification:'Kommon Grotesk, Normal'"
+         id="path45197" />
+      <path
+         d="m 349.71905,402.40039 h -35.712 v -96 h 35.712 z"
+         style="font-size:192px;font-family:'Kommon Grotesk';-inkscape-font-specification:'Kommon Grotesk, Normal'"
+         id="path45199" />
+      <path
+         d="m 331.86306,446.75239 q -8.448,0 -13.824,-4.8 -5.376,-4.8 -5.376,-12.864 0,-8.448 5.376,-13.248 5.376,-4.608 13.824,-4.608 8.448,0 13.824,4.608 5.376,4.8 5.376,13.248 0,8.256 -5.184,12.864 -5.376,4.8 -14.016,4.8 z"
+         style="font-size:192px;font-family:'Kommon Grotesk';-inkscape-font-specification:'Kommon Grotesk, Normal'"
+         id="path45201" />
+      <path
+         d="m 409.62278,402.40039 h -36.096 v -96 h 31.104 l 1.344,15.744 h 0.384 q 2.496,-7.872 9.408,-12.288 7.104,-4.608 17.28,-4.608 5.952,0 9.984,1.536 v 30.912 q -7.488,-2.112 -13.44,-2.112 -10.176,0 -15.168,4.608 -4.8,4.608 -4.8,14.784 z"
+         style="font-size:192px;font-family:'Kommon Grotesk';-inkscape-font-specification:'Kommon Grotesk, Normal'"
+         id="path45203" />
+    </g>
+  </g>
+</svg>
