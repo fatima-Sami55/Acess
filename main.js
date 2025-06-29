@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const session = require("express-session");
 const MSSQLStore = require("connect-mssql-v2");
 const methodOverride = require("method-override");
@@ -99,7 +99,7 @@ const {
    
     // START SERVER
     http.listen(port, () => {
-      console.log(`🚀 Server running at http://localhost:${port}`);
+      console.log(`🚀 Server running at ${port}`);
     });
 
   } catch (err) {
