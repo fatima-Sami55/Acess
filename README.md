@@ -17,9 +17,9 @@ A modern, full-featured, and responsive e-commerce web application built with No
 *   🔔 Real-time notifications (Socket.IO) for order status
 *   📧 Email sending using Nodemailer (e.g., activation links, order confirmations)
 *   🖼️ Product image uploads via Multer
-*   🛠️ Admin control panel for managing products
 *   🕐 Cron jobs for background tasks like notifications
-*   📱 Mobile-responsive design with custom breakpoints
+*   📱  Mobile-responsive design with custom breakpoints
+*   👉 And much more
 
 💻 Tech Stack
 -------------
