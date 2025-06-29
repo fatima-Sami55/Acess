@@ -110,7 +110,7 @@ if (!isValid) {
     // Email verification token
     const token = crypto.randomBytes(32).toString("hex");
     const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24 hrs
-    const verifyUrl = `http://localhost:3000/verify-email?token=${token}`;
+     const verifyUrl = `${baseUrl}/verify-email?token=${token}`;
 
     // Send verification email
     try {
