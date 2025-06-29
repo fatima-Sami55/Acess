@@ -64,15 +64,15 @@ The MSSQL database is hosted on **Microsoft Azure** for scalability and cloud re
     
 3.  Create a `.env` file with the following variables:
 
-    PORT=3000
-    DB_USER=your_db_username
-    DB_PASSWORD=your_password
-    DB_NAME=your_database_name
-    SESSION_SECRET=your_secure_secret
-    EMAIL_USER=youremail@example.com
-    EMAIL_PASS=emailpassword
-    BASE_URL=http://localhost:{port}
-    
+*    PORT=3000
+*    DB_USER=your_db_username
+*    DB_PASSWORD=your_password
+*    DB_NAME=your_database_name
+*    SESSION_SECRET=your_secure_secret
+*    EMAIL_USER=<youremail@example.com>
+*    EMAIL_PASS=emailpassword
+*    BASE_URL=<http://localhost:{port}>
+
 
 4.  Run the development server:
     
@@ -82,11 +82,6 @@ The MSSQL database is hosted on **Microsoft Azure** for scalability and cloud re
 ----------
 
 This project is licensed under the **MIT License**. You are free to use, modify, and distribute it with proper attribution.
-
-👩‍💻 Author
-------------
-
-**Fatima** — A passionate developer building real-world web applications with clean code.
 
 * * *
 
