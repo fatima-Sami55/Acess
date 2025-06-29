@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 const session = require("express-session");
 const MSSQLStore = require("connect-mssql-v2");
 const methodOverride = require("method-override");
