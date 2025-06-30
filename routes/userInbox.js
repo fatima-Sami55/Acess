@@ -377,12 +377,14 @@ const purchaseId = purchaseIdResult.recordset[0].purchase_id;
 
 router.get("/email", isAuthenticated, async(req, res) => {
       try {
+    console.log(req.session.userId)
+    const userId = req.session.userId;
     const result = await pool
       .request()
       .input("user_id", userId)
       .query(`
         SELECT * FROM EmailLogs
-        WHERE user_id = @user_id
+        WHERE userId = @user_id
         ORDER BY sentAt DESC
       `);
     
