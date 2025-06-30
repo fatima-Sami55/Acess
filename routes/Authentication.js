@@ -16,17 +16,8 @@ const isAuthenticated = require("../Middleware/is_logged_in");
 const logEmail = require("../helper_functions/emailLogger");
 const validateSignupInput = require("../helper_functions/validation");
 const redirectIfAuthenticated = require("../Middleware/is_allowed");
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, "./public/user_images"),
-  filename: (req, file, cb) => {
-    const ext = path.extname(file.originalname);
-    cb(null, file.fieldname + "-" + Date.now() + ext);
-  },
-});
+const { storage } = require("../cloudinary/cloudinary");
 const upload = multer({ storage });
-
-router.use("/public", express.static(path.join(__dirname, "public")));
-router.use("/users_images", express.static(path.join(__dirname, "public", "user_images")));
 
 async function getUserByEmail(email) {
   const result = await pool
@@ -81,6 +72,9 @@ const { isValid, errors } = validateSignupInput({
   zip,
 });
 
+const imageUrl = req.file?.path || null;
+console.log(imageUrl)
+
 
 if (!isValid) {
   console.log("Validation errors:", errors);
@@ -101,11 +95,6 @@ if (!isValid) {
     // Hash the password
     const salt = await bcrypt.genSalt(10);
     const hashedPass = await bcrypt.hash(Pass, salt);
-
-    // Handle image upload path
-    const imgPath = req.file?.path
-      ? req.file.path.replace(/\\/g, "/").replace("public/", "")
-      : null;
 
     // Email verification token
     const token = crypto.randomBytes(32).toString("hex");
@@ -146,7 +135,7 @@ if (!isValid) {
       .input("city", city)
       .input("province", province)
       .input("zip", zip)
-      .input("img", imgPath)
+      .input("img", imageUrl)
       .input("date_joined", dateJoined)
       .query(`
         INSERT INTO users (firstname, lastname, email, Pass, phone, address, city, province, zip, img, date_joined)

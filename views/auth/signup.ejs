@@ -312,10 +312,9 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
           data = await response.json();
         } catch (err) {
-          const text = await response.text();
-          console.error("❌ JSON Parse Error:", err, text);
-          alertContainer.innerHTML = `<div class="alert alert-danger">Could not parse server response.</div>`;
-          return;
+    console.error("❌ JSON Parse Error:", err);
+    alertContainer.innerHTML = `<div class="alert alert-danger">Could not parse server response.</div>`;
+    return;
         }
 
         alertContainer.innerHTML = "";
@@ -341,7 +340,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       })
       .catch((err) => {
-        console.error("🔥 Fetch error:", err);
+        alert("🔥 Fetch error:", err);
+        alert(err);
+        console.log("🔥 Fetch error:", err);
         alertContainer.innerHTML = `
           <div class="alert alert-danger alert-dismissible fade show" role="alert">
             Something went wrong. Please try again.

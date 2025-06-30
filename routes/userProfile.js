@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const path = require("path");
 const { pool } = require("../database/data");
 const sql = require("mssql");
 const getUserMiddleware = require("../Middleware/getUser");
@@ -14,21 +13,8 @@ const validateSignupInput = require("../helper_functions/validation");
 const {
   getNoticeCount,
 } = require("../helper_functions/timeBasedUpdate");
-
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "./public/user_images");
-  },
-  filename: function (req, file, cb) {
-    let extArray = file.mimetype.split("/");
-    let extension = extArray[extArray.length - 1];
-    cb(null, file.fieldname + "-" + Date.now() + "." + extension);
-  },
-});
-const upload = multer({ storage: storage });
-
-router.use("/public", express.static(path.join(__dirname, "public")));
-router.use("/users_images", express.static(path.join(__dirname, "public", "user_images")));
+const { storage } = require("../cloudinary/cloudinary");
+const upload = multer({ storage });
 
 function sanitizeSession() {
   const delSql = `DELETE FROM sessions WHERE JSON_VALUE(data, '$.userId') IS NULL`;
