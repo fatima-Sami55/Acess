@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
           data = await response.json();
         } catch (err) {
-    console.error("❌ JSON Parse Error:", err);
+    console.log("❌ JSON Parse Error:", text);
     alertContainer.innerHTML = `<div class="alert alert-danger">Could not parse server response.</div>`;
     return;
         }

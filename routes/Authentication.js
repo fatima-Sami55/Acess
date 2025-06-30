@@ -60,6 +60,7 @@ lastname = lastname.trim();
 email = email.trim();
 address = address.trim();
 city = city.trim();
+const imageUrl = req.file?.path || null;
 
 const { isValid, errors } = validateSignupInput({
   firstname,
@@ -72,7 +73,7 @@ const { isValid, errors } = validateSignupInput({
   zip,
 });
 
-const imageUrl = req.file?.path || null;
+console.log(req.body)
 console.log(imageUrl)
 
 
@@ -143,6 +144,7 @@ if (!isValid) {
         VALUES (@firstname, @lastname, @email, @Pass, @phone, @address, @city, @province, @zip, @img, @date_joined)
       `);
 
+    console.log(result)
     const userId = result.recordset[0].id;
 
     // Save token for verification
