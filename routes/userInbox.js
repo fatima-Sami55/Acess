@@ -377,9 +377,14 @@ const purchaseId = purchaseIdResult.recordset[0].purchase_id;
 
 router.get("/email", isAuthenticated, async(req, res) => {
       try {
-      const result =  await pool.request().query(`
-      SELECT  * FROM EmailLogs ORDER BY sentAt DESC
-    `);
+    const result = await pool
+      .request()
+      .input("user_id", userId)
+      .query(`
+        SELECT * FROM EmailLogs
+        WHERE user_id = @user_id
+        ORDER BY sentAt DESC
+      `);
     
     res.render("email", {
       page: "email",
